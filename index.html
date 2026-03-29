@@ -23,18 +23,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 /* ── HERO ── */
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--sand);}
 
-/*
-  ============================================================
-  STAG PLACEHOLDER - swap instructions
-  ============================================================
-  Download a free CC0 stag silhouette from svgsilh.com/search/#deer
-  Save as stag.svg alongside index.html, then replace each
-  placeholder div with:
-    <div class="stag-hero"><img src="stag.svg" alt=""></div>
-  Or paste the raw <svg> tag directly inside the div.
-  The CSS fade mask and brightness filter handle the rest.
-  ============================================================
-*/
+
 .stag-hero{
   position:absolute;right:-2vw;bottom:0;
   width:48vw;max-width:640px;
@@ -42,7 +31,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
   mask-image:radial-gradient(ellipse 80% 90% at 60% 55%, black 25%, transparent 72%);
   -webkit-mask-image:radial-gradient(ellipse 80% 90% at 60% 55%, black 25%, transparent 72%);
 }
-.stag-hero svg,.stag-hero img{width:100%;height:auto;display:block;filter:brightness(0);}
+.stag-hero img{width:100%;height:auto;display:block;}
 
 .hero-content{position:relative;z-index:2;padding:7rem 7vw;max-width:640px;}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:1.1rem;}
@@ -72,7 +61,7 @@ section{padding:5.5rem 7vw;}
 /* ── ABOUT ── */
 .about-section{background:var(--sand);display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;}
 .about-img{width:100%;aspect-ratio:3/4;background:var(--sand-dark);border-radius:4px;position:relative;overflow:visible;display:flex;align-items:center;justify-content:center;}
-.stag-about{width:70%;opacity:0.22;filter:brightness(0);}
+.stag-about{width:70%;opacity:0.18;}
 .badge{position:absolute;bottom:-1.2rem;right:-1.2rem;background:var(--terra);color:var(--shell);padding:1.1rem 1.4rem;border-radius:2px;text-align:center;line-height:1.3;}
 .badge strong{display:block;font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;}
 .badge span{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;}
@@ -101,7 +90,7 @@ section{padding:5.5rem 7vw;}
 .manifesto-body{font-size:0.94rem;color:rgba(250,246,237,0.7);line-height:1.9;margin-bottom:1.1rem;}
 .manifesto-body strong{color:var(--terra-light);font-weight:500;}
 .manifesto-bg{position:absolute;left:-60px;bottom:-40px;width:38vw;max-width:440px;opacity:0.04;pointer-events:none;}
-.manifesto-bg img,.manifesto-bg svg{width:100%;height:auto;display:block;filter:brightness(10);}
+.manifesto-bg img{width:100%;height:auto;display:block;}
 
 /* ── MODEL CARDS ── */
 .models-intro{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra-light);margin-bottom:1.2rem;position:relative;z-index:2;}
@@ -135,7 +124,7 @@ section{padding:5.5rem 7vw;}
 /* ── SKILLS ── */
 .skills-section{background:var(--sand);position:relative;overflow:hidden;}
 .stag-skill-wrap{position:absolute;right:-60px;bottom:-30px;width:36vw;max-width:420px;opacity:0.07;pointer-events:none;}
-.stag-skill-wrap img,.stag-skill-wrap svg{width:100%;height:auto;display:block;filter:brightness(0);}
+.stag-skill-wrap img{width:100%;height:auto;display:block;}
 .sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;position:relative;z-index:2;}
 .sk-group{padding:1.6rem;background:var(--shell);border-radius:4px;border-left:2px solid var(--terra);}
 .sk-group h4{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:0.9rem;}
@@ -213,12 +202,7 @@ footer span{color:var(--terra-light);}
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <!--
-    STAG PLACEHOLDER - replace with your chosen silhouette:
-      <div class="stag-hero"><img src="stag.svg" alt=""></div>
-    Free CC0 silhouettes: svgsilh.com/search/#deer
-  -->
-  <div class="stag-hero"><!-- YOUR STAG SVG GOES HERE --></div>
+  <div class="stag-hero"><img src="website_main_image.png" alt=""></div>
 
   <div class="hero-content">
     <p class="eyebrow">Senior Data Scientist · PhD · Computational Biology</p>
@@ -258,8 +242,7 @@ footer span{color:var(--terra-light);}
 <section class="about-section" id="about">
   <div style="position:relative;">
     <div class="about-img">
-      <!-- STAG PLACEHOLDER: <img class="stag-about" src="stag.svg" alt=""> -->
-      <div class="stag-about"><!-- YOUR STAG SVG GOES HERE --></div>
+      <img class="stag-about" src="website_main_image.png" alt="">
       <div class="badge"><strong>5+</strong><span>Years Experience</span></div>
     </div>
   </div>
@@ -283,8 +266,7 @@ footer span{color:var(--terra-light);}
 <!-- ── AI VISION ── -->
 <section class="manifesto-section" id="ai-vision">
 
-  <!-- STAG PLACEHOLDER (ghost): <div class="manifesto-bg"><img src="stag.svg" alt=""></div> -->
-  <div class="manifesto-bg"><!-- YOUR STAG SVG GOES HERE --></div>
+  <div class="manifesto-bg"><img src="website_main_image.png" alt=""></div>
 
   <p class="sec-label">A perspective on AI in science</p>
   <h2 class="sec-h" style="color:var(--shell);">AI is going to be part of everyday science.<br>It should work for everyone.</h2>
@@ -455,8 +437,7 @@ footer span{color:var(--terra-light);}
 
 <!-- ── SKILLS ── -->
 <section class="skills-section" id="skills">
-  <!-- STAG PLACEHOLDER: <div class="stag-skill-wrap"><img src="stag.svg" alt=""></div> -->
-  <div class="stag-skill-wrap"><!-- YOUR STAG SVG GOES HERE --></div>
+  <div class="stag-skill-wrap"><img src="website_main_image.png" alt=""></div>
 
   <p class="sec-label">Skills &amp; Tools</p>
   <h2 class="sec-h">The craft behind the work.</h2>
