@@ -27,7 +27,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 .stag-hero{
   position:absolute;right:-2vw;top:8%;
   width:52vw;max-width:720px;
-  pointer-events:none;opacity:0.2;
+  pointer-events:none;opacity:0.35;
   mask-image:radial-gradient(ellipse 75% 75% at 55% 42%, black 22%, transparent 68%);
   -webkit-mask-image:radial-gradient(ellipse 75% 75% at 55% 42%, black 22%, transparent 68%);
 }
@@ -64,8 +64,9 @@ section{padding:5.5rem 7vw;}
 .stag-about{
   width:100%;height:auto;
   display:block;
-  opacity:0.55;
+  opacity:0.85;
   border-radius:8px;
+  mix-blend-mode:multiply;
 }
 .badge{position:absolute;bottom:1rem;right:1rem;background:var(--terra);color:var(--shell);padding:1.1rem 1.4rem;border-radius:2px;text-align:center;line-height:1.3;}
 .badge strong{display:block;font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;}
@@ -247,7 +248,7 @@ footer span{color:var(--terra-light);}
 <section class="about-section" id="about">
   <div style="position:relative;">
     <div class="about-img">
-      <img class="stag-about" src="website_main_image.png" alt="">
+      <img class="stag-about" src="website_protein_structure.png" alt="">
       <div class="badge"><strong>5+</strong><span>Years Experience</span></div>
     </div>
   </div>
