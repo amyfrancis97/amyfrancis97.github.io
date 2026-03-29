@@ -26,7 +26,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 
 .stag-hero{
   position:absolute;right:0;top:0;bottom:0;
-  width:55vw;max-width:760px;
+  width:46vw;max-width:640px;
   pointer-events:none;opacity:0.32;
   display:flex;align-items:center;
   mask-image:radial-gradient(ellipse 85% 80% at 60% 50%, black 28%, transparent 72%);
@@ -132,7 +132,7 @@ section{padding:5.5rem 7vw;}
 .skills-section{background:var(--sand);position:relative;overflow:hidden;}
 .stag-skill-wrap{position:absolute;right:-40px;bottom:-20px;width:44vw;max-width:520px;opacity:0.09;pointer-events:none;}
 .stag-skill-wrap img{width:100%;height:auto;display:block;}
-.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;position:relative;z-index:2;}
+.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;position:relative;z-index:2;}
 .sk-group{padding:1.6rem;background:var(--shell);border-radius:4px;border-left:2px solid var(--terra);}
 .sk-group h4{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:0.9rem;}
 .sk-list{list-style:none;}
@@ -173,6 +173,8 @@ footer span{color:var(--terra-light);}
 @media(max-width:900px){
   .about-section,.contact-section{grid-template-columns:1fr;gap:2rem;}
   .manifesto-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .sk-grid{grid-template-columns:repeat(2,1fr);}
+
   .models-grid{grid-template-columns:1fr 1fr;}
   .badge{right:0;bottom:-1rem;}
   .nav-links{display:none;}
