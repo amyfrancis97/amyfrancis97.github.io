@@ -25,13 +25,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 
 
 .stag-hero{
-  position:absolute;right:-2vw;top:8%;
-  width:52vw;max-width:720px;
-  pointer-events:none;opacity:0.35;
-  mask-image:radial-gradient(ellipse 75% 75% at 55% 42%, black 22%, transparent 68%);
-  -webkit-mask-image:radial-gradient(ellipse 75% 75% at 55% 42%, black 22%, transparent 68%);
+  position:absolute;right:0;top:0;bottom:0;
+  width:55vw;max-width:760px;
+  pointer-events:none;opacity:0.32;
+  display:flex;align-items:center;
+  mask-image:radial-gradient(ellipse 85% 80% at 60% 50%, black 28%, transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse 85% 80% at 60% 50%, black 28%, transparent 72%);
 }
-.stag-hero img{width:100%;height:auto;display:block;}
+.stag-hero img{width:100%;height:auto;display:block;object-fit:contain;mix-blend-mode:multiply;}
 
 .hero-content{position:relative;z-index:2;padding:7rem 7vw;max-width:640px;}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:1.1rem;}
@@ -59,12 +60,12 @@ section{padding:5.5rem 7vw;}
 .win-divider{width:1px;background:rgba(250,246,237,0.3);height:50px;}
 
 /* ── ABOUT ── */
-.about-section{background:var(--sand);display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:center;}
-.about-img{width:100%;position:relative;border-radius:8px;overflow:hidden;background:var(--sand-dark);}
+.about-section{background:var(--sand);display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;padding:5.5rem 7vw;}
+.about-img{width:100%;position:relative;border-radius:8px;}
 .stag-about{
   width:100%;height:auto;
   display:block;
-  opacity:0.85;
+  opacity:0.88;
   border-radius:8px;
   mix-blend-mode:multiply;
 }
@@ -170,7 +171,8 @@ footer span{color:var(--terra-light);}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  .about-section,.contact-section,.manifesto-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .about-section,.contact-section{grid-template-columns:1fr;gap:2rem;}
+  .manifesto-inner{grid-template-columns:1fr;gap:2.5rem;}
   .models-grid{grid-template-columns:1fr 1fr;}
   .badge{right:0;bottom:-1rem;}
   .nav-links{display:none;}
@@ -208,7 +210,7 @@ footer span{color:var(--terra-light);}
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <div class="stag-hero"><img src="website_main_image.png" alt=""></div>
+  <div class="stag-hero"><img src="models.png" alt=""></div>
 
   <div class="hero-content">
     <p class="eyebrow">Senior Data Scientist · PhD · Computational Biology</p>
@@ -246,11 +248,8 @@ footer span{color:var(--terra-light);}
 
 <!-- ── ABOUT ── -->
 <section class="about-section" id="about">
-  <div style="position:relative;">
-    <div class="about-img">
-      <img class="stag-about" src="website_protein_structure.png" alt="">
-      <div class="badge"><strong>5+</strong><span>Years Experience</span></div>
-    </div>
+  <div class="about-img">
+    <img class="stag-about" src="website_protein_structure.png" alt="">
   </div>
 
   <div class="about-text">
@@ -262,9 +261,11 @@ footer span{color:var(--terra-light);}
     <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories - at Cambridge and the Wellcome Collection - and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments where that becomes possible.</p>
     <div class="facts">
       <div class="fact"><div class="fact-l">Based in</div><div class="fact-v">Bristol, UK</div></div>
+      <div class="fact"><div class="fact-l">Experience</div><div class="fact-v">5+ Years</div></div>
       <div class="fact"><div class="fact-l">Current role</div><div class="fact-v">Senior Data Scientist, Nexus BioQuest</div></div>
-      <div class="fact"><div class="fact-l">PhD</div><div class="fact-v">Bioinformatics &amp; ML, University of Bristol</div></div>
-      <div class="fact"><div class="fact-l">Interests</div><div class="fact-v">AI in science, open collaboration, knowledge sharing</div></div>
+      <div class="fact"><div class="fact-l">PhD</div><div class="fact-v">Bioinformatics &amp; ML, Bristol</div></div>
+      <div class="fact"><div class="fact-l">Funded by</div><div class="fact-v">Cancer Research UK</div></div>
+      <div class="fact"><div class="fact-l">Interests</div><div class="fact-v">AI in science, open collaboration</div></div>
     </div>
   </div>
 </section>
@@ -272,7 +273,7 @@ footer span{color:var(--terra-light);}
 <!-- ── AI VISION ── -->
 <section class="manifesto-section" id="ai-vision">
 
-  <div class="manifesto-bg"><img src="website_main_image.png" alt=""></div>
+  <div class="manifesto-bg"><img src="models.png" alt=""></div>
 
   <p class="sec-label">A perspective on AI in science</p>
   <h2 class="sec-h" style="color:var(--shell);">AI is going to be part of everyday science.<br>It should work for everyone.</h2>
@@ -443,7 +444,7 @@ footer span{color:var(--terra-light);}
 
 <!-- ── SKILLS ── -->
 <section class="skills-section" id="skills">
-  <div class="stag-skill-wrap"><img src="website_main_image.png" alt=""></div>
+  <div class="stag-skill-wrap"><img src="models.png" alt=""></div>
 
   <p class="sec-label">Skills &amp; Tools</p>
   <h2 class="sec-h">The craft behind the work.</h2>
