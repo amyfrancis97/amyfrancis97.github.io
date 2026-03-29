@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amy Francis PhD — Senior Data Scientist</title>
+<title>Amy Francis PhD - Senior Data Scientist</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -16,7 +16,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--shell);color:var(--ink);f
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:flex;justify-content:space-between;align-items:center;background:rgba(245,239,224,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--sand-dark);}
 .nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink);text-decoration:none;}
-.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links{display:flex;gap:1.6rem;list-style:none;}
 .nav-links a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
 .nav-links a:hover{color:var(--terra);}
 
@@ -25,38 +25,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 
 /*
   ============================================================
-  STAG PLACEHOLDER
+  STAG PLACEHOLDER - swap instructions
   ============================================================
-  Replace the .stag-hero <img> src below with your chosen
-  silhouette. Good free sources:
-    • https://svgsilh.com  (search "stag" or "deer")
-    • https://thenounproject.com  (filter: free / CC)
-    • https://www.flaticon.com  (filter: free)
-
-  Download as SVG, save alongside index.html, then either:
-    a) <img class="stag-hero" src="stag.svg" alt="">
-    b) Paste the raw <svg> tag directly in place of the <img>
-
-  The CSS below handles the fade-mask effect automatically.
+  Download a free CC0 stag silhouette from svgsilh.com/search/#deer
+  Save as stag.svg alongside index.html, then replace each
+  placeholder div with:
+    <div class="stag-hero"><img src="stag.svg" alt=""></div>
+  Or paste the raw <svg> tag directly inside the div.
+  The CSS fade mask and brightness filter handle the rest.
   ============================================================
 */
 .stag-hero{
   position:absolute;right:-2vw;bottom:0;
   width:48vw;max-width:640px;
-  pointer-events:none;
-  opacity:0.15;
+  pointer-events:none;opacity:0.15;
   mask-image:radial-gradient(ellipse 80% 90% at 60% 55%, black 25%, transparent 72%);
   -webkit-mask-image:radial-gradient(ellipse 80% 90% at 60% 55%, black 25%, transparent 72%);
 }
+.stag-hero svg,.stag-hero img{width:100%;height:auto;display:block;filter:brightness(0);}
 
-/* Tint the SVG to match ink colour — works on inline SVGs and same-origin <img> */
-.stag-hero svg, .stag-hero img { width:100%; height:auto; display:block; filter:brightness(0); }
-
-.hero-content{position:relative;z-index:2;padding:7rem 7vw;max-width:620px;}
+.hero-content{position:relative;z-index:2;padding:7rem 7vw;max-width:640px;}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:1.1rem;}
 .hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6.5vw,5rem);font-weight:600;line-height:1.05;color:var(--ink);margin-bottom:0.3rem;}
 .hero-title{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.2vw,1.4rem);font-style:italic;color:var(--terra);margin-bottom:1.6rem;}
-.hero-bio{font-size:0.97rem;color:var(--ink-light);max-width:500px;margin-bottom:2.2rem;line-height:1.85;}
+.hero-bio{font-size:0.97rem;color:var(--ink-light);max-width:560px;margin-bottom:2.2rem;line-height:1.85;}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.2rem;}
 .hero-tag{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--moss);background:rgba(92,107,72,0.12);padding:4px 10px;border-radius:2px;}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;}
@@ -68,20 +60,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 section{padding:5.5rem 7vw;}
 .sec-label{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:0.7rem;}
 .sec-h{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:600;color:var(--ink);margin-bottom:0.9rem;line-height:1.2;}
-.sec-sub{font-size:0.97rem;color:var(--muted);max-width:560px;margin-bottom:2.8rem;line-height:1.8;}
+.sec-sub{font-size:0.97rem;color:var(--muted);max-width:580px;margin-bottom:2.8rem;line-height:1.8;}
+
+/* ── WINS BAR ── */
+.wins-bar{background:var(--terra);padding:2rem 7vw;display:flex;gap:3rem;flex-wrap:wrap;align-items:center;}
+.win-item{color:var(--shell);}
+.win-item strong{display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;}
+.win-item span{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.8;}
+.win-divider{width:1px;background:rgba(250,246,237,0.3);height:50px;}
 
 /* ── ABOUT ── */
 .about-section{background:var(--sand);display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;}
 .about-img{width:100%;aspect-ratio:3/4;background:var(--sand-dark);border-radius:4px;position:relative;overflow:visible;display:flex;align-items:center;justify-content:center;}
-
-/*
-  ============================================================
-  ABOUT SECTION STAG — same swap instructions as hero above.
-  Use a smaller version of the same silhouette, or the same file.
-  ============================================================
-*/
 .stag-about{width:70%;opacity:0.22;filter:brightness(0);}
-
 .badge{position:absolute;bottom:-1.2rem;right:-1.2rem;background:var(--terra);color:var(--shell);padding:1.1rem 1.4rem;border-radius:2px;text-align:center;line-height:1.3;}
 .badge strong{display:block;font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;}
 .badge span{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;}
@@ -92,12 +83,35 @@ section{padding:5.5rem 7vw;}
 .fact-l{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem;}
 .fact-v{font-size:0.88rem;font-weight:500;color:var(--ink);}
 
-/* ── WINS BAR ── */
-.wins-bar{background:var(--terra);padding:2rem 7vw;display:flex;gap:3rem;flex-wrap:wrap;align-items:center;}
-.win-item{color:var(--shell);}
-.win-item strong{display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;}
-.win-item span{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.8;}
-.win-divider{width:1px;background:rgba(250,246,237,0.3);height:50px;}
+/* ── AI MANIFESTO ── */
+.manifesto-section{background:var(--ink);color:var(--shell);position:relative;overflow:hidden;}
+.manifesto-section .sec-label{color:var(--terra-light);}
+.manifesto-section .sec-h{color:var(--shell);}
+.manifesto-section .sec-sub{color:rgba(250,246,237,0.55);margin-bottom:3rem;}
+.manifesto-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.manifesto-statement{position:relative;z-index:2;}
+.manifesto-quote{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.2rem,2.5vw,1.8rem);
+  font-weight:400;font-style:italic;
+  color:var(--shell);line-height:1.55;
+  border-left:3px solid var(--terra);
+  padding-left:1.8rem;margin-bottom:2rem;
+}
+.manifesto-body{font-size:0.94rem;color:rgba(250,246,237,0.7);line-height:1.9;margin-bottom:1.1rem;}
+.manifesto-body strong{color:var(--terra-light);font-weight:500;}
+.manifesto-bg{position:absolute;left:-60px;bottom:-40px;width:38vw;max-width:440px;opacity:0.04;pointer-events:none;}
+.manifesto-bg img,.manifesto-bg svg{width:100%;height:auto;display:block;filter:brightness(10);}
+
+/* ── MODEL CARDS ── */
+.models-intro{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra-light);margin-bottom:1.2rem;position:relative;z-index:2;}
+.models-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;position:relative;z-index:2;}
+.model-card{background:rgba(250,246,237,0.04);border:1px solid rgba(250,246,237,0.09);border-radius:4px;padding:1.2rem;transition:background 0.2s,border-color 0.2s;}
+.model-card:hover{background:rgba(250,246,237,0.08);border-color:rgba(196,98,45,0.5);}
+.model-name{font-size:13px;font-weight:500;color:var(--terra-light);margin-bottom:0.2rem;letter-spacing:0.03em;}
+.model-org{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,246,237,0.3);margin-bottom:0.55rem;}
+.model-desc{font-size:0.8rem;color:rgba(250,246,237,0.55);line-height:1.6;}
+.models-footer{font-size:0.8rem;color:rgba(250,246,237,0.3);margin-top:1.1rem;line-height:1.7;position:relative;z-index:2;}
 
 /* ── PROJECTS ── */
 .projects-section{background:var(--shell);}
@@ -119,31 +133,21 @@ section{padding:5.5rem 7vw;}
 .proj-link::after{content:' →';}
 
 /* ── SKILLS ── */
-.skills-section{background:var(--ink);color:var(--shell);position:relative;overflow:hidden;}
-.skills-section .sec-label{color:var(--terra-light);}
-.skills-section .sec-h{color:var(--shell);}
-.skills-section .sec-sub{color:rgba(250,246,237,0.5);}
-
-/*
-  ============================================================
-  SKILLS SECTION STAG BACKGROUND
-  Same swap — place your stag SVG/img inside .stag-skill-wrap
-  ============================================================
-*/
-.stag-skill-wrap{position:absolute;right:-60px;bottom:-30px;width:36vw;max-width:420px;opacity:0.06;pointer-events:none;filter:brightness(10);}
-.stag-skill-wrap img, .stag-skill-wrap svg{width:100%;height:auto;display:block;}
-
+.skills-section{background:var(--sand);position:relative;overflow:hidden;}
+.stag-skill-wrap{position:absolute;right:-60px;bottom:-30px;width:36vw;max-width:420px;opacity:0.07;pointer-events:none;}
+.stag-skill-wrap img,.stag-skill-wrap svg{width:100%;height:auto;display:block;filter:brightness(0);}
 .sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;position:relative;z-index:2;}
-.sk-group{padding:1.6rem;border:1px solid rgba(250,246,237,0.1);border-radius:4px;}
-.sk-group h4{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra-light);margin-bottom:0.9rem;}
+.sk-group{padding:1.6rem;background:var(--shell);border-radius:4px;border-left:2px solid var(--terra);}
+.sk-group h4{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:0.9rem;}
 .sk-list{list-style:none;}
-.sk-list li{font-size:0.88rem;color:rgba(250,246,237,0.72);padding:0.28rem 0;border-bottom:1px solid rgba(250,246,237,0.05);display:flex;align-items:center;gap:7px;}
-.sk-list li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--terra-light);flex-shrink:0;}
+.sk-list li{font-size:0.88rem;color:var(--ink-light);padding:0.28rem 0;border-bottom:1px solid var(--sand-dark);display:flex;align-items:center;gap:7px;}
+.sk-list li:last-child{border-bottom:none;}
+.sk-list li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--terra);flex-shrink:0;}
 
 /* ── PUBLICATIONS ── */
-.pubs-section{background:var(--sand);}
+.pubs-section{background:var(--shell);}
 .pub-list{display:flex;flex-direction:column;gap:1.2rem;}
-.pub-item{background:var(--shell);padding:1.5rem;border-radius:4px;border-left:3px solid var(--terra);display:flex;flex-direction:column;gap:0.4rem;}
+.pub-item{background:var(--sand);padding:1.5rem;border-radius:4px;border-left:3px solid var(--terra);display:flex;flex-direction:column;gap:0.4rem;}
 .pub-type{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);}
 .pub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.3;}
 .pub-journal{font-size:0.85rem;color:var(--muted);font-style:italic;}
@@ -151,18 +155,18 @@ section{padding:5.5rem 7vw;}
 .pub-doi:hover{text-decoration:underline;}
 
 /* ── CONTACT ── */
-.contact-section{background:var(--shell);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.contact-section{background:var(--sand);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
 .contact-left p{color:var(--muted);margin-bottom:1.8rem;line-height:1.85;font-size:0.95rem;}
 .channels{display:flex;flex-direction:column;gap:0.9rem;}
-.channel{display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;background:var(--sand);border-radius:2px;text-decoration:none;color:var(--ink);transition:background 0.2s;}
+.channel{display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;background:var(--shell);border-radius:2px;text-decoration:none;color:var(--ink);transition:background 0.2s;}
 .channel:hover{background:var(--sand-dark);}
 .ch-icon{width:34px;height:34px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .ch-info strong{display:block;font-size:0.88rem;font-weight:500;color:var(--ink);}
 .ch-info span{font-size:0.78rem;color:var(--muted);}
-.contact-form{background:var(--sand);padding:2.2rem;border-radius:4px;}
+.contact-form{background:var(--shell);padding:2.2rem;border-radius:4px;}
 .fg{margin-bottom:1.1rem;}
 .fg label{display:block;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem;}
-.fg input,.fg textarea{width:100%;padding:0.7rem 0.9rem;background:var(--shell);border:1px solid var(--sand-dark);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--ink);outline:none;transition:border-color 0.2s;resize:none;}
+.fg input,.fg textarea{width:100%;padding:0.7rem 0.9rem;background:var(--sand);border:1px solid var(--sand-dark);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--ink);outline:none;transition:border-color 0.2s;resize:none;}
 .fg input:focus,.fg textarea:focus{border-color:var(--terra);}
 
 /* ── FOOTER ── */
@@ -170,14 +174,16 @@ footer{background:var(--ink);color:rgba(250,246,237,0.35);padding:1.8rem 7vw;dis
 footer span{color:var(--terra-light);}
 
 /* ── RESPONSIVE ── */
-@media(max-width:800px){
-  .about-section,.contact-section{grid-template-columns:1fr;gap:2.5rem;}
+@media(max-width:900px){
+  .about-section,.contact-section,.manifesto-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .models-grid{grid-template-columns:1fr 1fr;}
   .badge{right:0;bottom:-1rem;}
   .nav-links{display:none;}
   .stag-hero{width:85vw;right:-15vw;opacity:0.1;}
   .wins-bar{gap:1.5rem;}
   .win-divider{display:none;}
 }
+@media(max-width:520px){.models-grid{grid-template-columns:1fr;}}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
@@ -196,6 +202,7 @@ footer span{color:var(--terra-light);}
   <a class="nav-logo" href="#">Amy Francis, PhD</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#ai-vision">AI Vision</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#publications">Publications</a></li>
@@ -205,43 +212,25 @@ footer span{color:var(--terra-light);}
 
 <!-- ── HERO ── -->
 <section class="hero">
-
   <!--
-    ============================================================
-    SWAP IN YOUR STAG HERE (hero background)
-    ============================================================
-    Option A — link to a downloaded SVG file:
-      <div class="stag-hero">
-        <img src="stag.svg" alt="">
-      </div>
-
-    Option B — paste raw SVG code:
-      <div class="stag-hero">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="...">
-          ... paste SVG content here ...
-        </svg>
-      </div>
-
-    Recommended free sources:
-      https://svgsilh.com/search/#deer   (licence: CC0)
-      https://thenounproject.com         (filter: free)
-    ============================================================
+    STAG PLACEHOLDER - replace with your chosen silhouette:
+      <div class="stag-hero"><img src="stag.svg" alt=""></div>
+    Free CC0 silhouettes: svgsilh.com/search/#deer
   -->
-  <div class="stag-hero">
-    <!-- YOUR STAG SVG GOES HERE -->
-  </div>
+  <div class="stag-hero"><!-- YOUR STAG SVG GOES HERE --></div>
 
   <div class="hero-content">
     <p class="eyebrow">Senior Data Scientist · PhD · Computational Biology</p>
     <h1 class="hero-name">Amy<br>Francis</h1>
-    <p class="hero-title">Bridging machine learning &amp; biological discovery</p>
-    <p class="hero-bio">Data scientist bridging computational biology and experimental research — with expertise in machine learning, bioinformatics, and tool development across cancer genomics, immunology, and drug discovery. I specialise in translating complex analytical approaches into practical solutions, enabling scientists to focus on discovery rather than data processing. I thrive leading interdisciplinary teams, having secured two hackathon first-place wins, and enjoy building environments where collaboration drives breakthroughs.</p>
+    <p class="hero-title">Data science, ML &amp; drug discovery - for everyone.</p>
+    <p class="hero-bio">I'm a Senior Data Scientist bridging computational biology and experimental research, with expertise in machine learning, bioinformatics, and tool development across cancer genomics, immunology, and drug discovery. I think a lot about how AI is changing science - and about making sure those changes reach every researcher, not just those with a machine learning background. My work tries to do that: building practical tools, leading interdisciplinary teams, and figuring out how to get the most out of modern AI in real biological research.</p>
     <div class="hero-tags">
       <span class="hero-tag">Cancer Genomics</span>
       <span class="hero-tag">Drug Discovery</span>
       <span class="hero-tag">Protein ML</span>
       <span class="hero-tag">RNA-seq</span>
-      <span class="hero-tag">Team Leadership</span>
+      <span class="hero-tag">Foundation Models</span>
+      <span class="hero-tag">AI in Science</span>
       <span class="hero-tag">2× Hackathon Winner</span>
     </div>
     <div class="ctas">
@@ -253,50 +242,34 @@ footer span{color:var(--terra-light);}
 
 <!-- ── WINS BAR ── -->
 <div class="wins-bar">
-  <div class="win-item">
-    <strong>2×</strong>
-    <span>Hackathon First Place</span>
-  </div>
+  <div class="win-item"><strong>2×</strong><span>Hackathon First Place</span></div>
   <div class="win-divider"></div>
-  <div class="win-item">
-    <strong>4</strong>
-    <span>Publications</span>
-  </div>
+  <div class="win-item"><strong>4</strong><span>Publications</span></div>
   <div class="win-divider"></div>
-  <div class="win-item">
-    <strong>PhD</strong>
-    <span>Bioinformatics &amp; ML · Bristol</span>
-  </div>
+  <div class="win-item"><strong>PhD</strong><span>Bioinformatics &amp; ML · Bristol</span></div>
   <div class="win-divider"></div>
-  <div class="win-item">
-    <strong>Roche</strong>
-    <span>AI Internship · Basel &amp; Zürich</span>
-  </div>
+  <div class="win-item"><strong>Roche</strong><span>AI Internship · Basel &amp; Zürich</span></div>
+  <div class="win-divider"></div>
+  <div class="win-item"><strong>Nature</strong><span>Biomed Engineering · Published</span></div>
 </div>
 
 <!-- ── ABOUT ── -->
 <section class="about-section" id="about">
   <div style="position:relative;">
     <div class="about-img">
-      <!--
-        SWAP IN YOUR STAG HERE (about panel)
-        <img class="stag-about" src="stag.svg" alt="">
-      -->
+      <!-- STAG PLACEHOLDER: <img class="stag-about" src="stag.svg" alt=""> -->
       <div class="stag-about"><!-- YOUR STAG SVG GOES HERE --></div>
-      <div class="badge">
-        <strong>5+</strong>
-        <span>Years Experience</span>
-      </div>
+      <div class="badge"><strong>5+</strong><span>Years Experience</span></div>
     </div>
   </div>
 
   <div class="about-text">
     <p class="sec-label">About me</p>
     <h2 class="sec-h">Where biology meets<br>machine learning.</h2>
-    <h3>Patient, precise, and always asking the harder question.</h3>
-    <p>I'm a Senior Data Scientist and first hire at Nexus BioQuest, where I established the data science function from scratch — building analytical infrastructure, consulting with clients across pharmaceutical and biotech sectors, and developing tools that make complex data accessible to scientists.</p>
-    <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche in Basel and Zürich, exploring protein language models and antibody optimisation.</p>
-    <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories — at Cambridge and the Wellcome Collection — and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments that make that happen.</p>
+    <h3>I came from the biology side, and I've always thought the most interesting work happens where disciplines overlap.</h3>
+    <p>I'm a Senior Data Scientist and first hire at Nexus BioQuest, a CRO in Bristol, where I established the data science function from scratch - building analytical infrastructure, consulting with clients across pharmaceutical and biotech sectors, and developing tools that make complex assay data accessible to scientists.</p>
+    <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche in Basel and Zürich, exploring protein language models and antibody optimisation - and published four peer-reviewed papers across cancer genomics, variant prediction, and drug discovery.</p>
+    <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories - at Cambridge and the Wellcome Collection - and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments where that becomes possible.</p>
     <div class="facts">
       <div class="fact"><div class="fact-l">Based in</div><div class="fact-v">Bristol, UK</div></div>
       <div class="fact"><div class="fact-l">Current role</div><div class="fact-v">Senior Data Scientist, Nexus BioQuest</div></div>
@@ -306,11 +279,108 @@ footer span{color:var(--terra-light);}
   </div>
 </section>
 
+<!-- ── AI VISION ── -->
+<section class="manifesto-section" id="ai-vision">
+
+  <!-- STAG PLACEHOLDER (ghost): <div class="manifesto-bg"><img src="stag.svg" alt=""></div> -->
+  <div class="manifesto-bg"><!-- YOUR STAG SVG GOES HERE --></div>
+
+  <p class="sec-label">A perspective on AI in science</p>
+  <h2 class="sec-h" style="color:var(--shell);">AI is going to be part of everyday science.<br>It should work for everyone.</h2>
+  <p class="sec-sub">Science is changing fast, and AI is a big part of why. The question worth asking is not what these tools can do in theory - it's who actually gets to use them.</p>
+
+  <div class="manifesto-inner">
+    <div class="manifesto-statement">
+      <p class="manifesto-quote">"Some of the most powerful tools in the history of biology are sitting in research papers and GitHub repos that most bench scientists have never heard of. That feels like a problem worth working on."</p>
+      <p class="manifesto-body">
+        The past few years have produced some remarkable models. AlphaFold more or less solved protein structure prediction, a problem that had been open for 50 years. ESM-2 showed that a language model trained on protein sequences alone could pick up on evolutionary relationships that took decades of wet-lab work to characterise. These are not small steps forward - they represent a real change in what is possible.
+      </p>
+      <p class="manifesto-body">
+        But using these models well still requires a fairly unusual mix of skills - enough machine learning to run and adapt them, enough compute to actually train or fine-tune them, and enough domain knowledge to know what to do with the output. Most biologists have one of those things, maybe two. The gap between what these tools can do and what most researchers can access is real, and it matters.
+      </p>
+      <p class="manifesto-body">
+        Something is also shifting in how the industry is organised. Pharmaceutical companies are increasingly partnering with smaller technology companies - Cradle, Twist Bioscience, Recursion, Insilico Medicine - rather than trying to build everything in-house. That collaboration between deep biological knowledge and modern ML tooling is starting to compress drug discovery timelines in ways that would have seemed unlikely five years ago. Whether that means genuinely better drugs, fewer side effects, and access to molecular spaces that were previously out of reach is a question I think about a lot. I write about it in the blog.
+      </p>
+      <p class="manifesto-body">
+        I came into data science from the biology side, so I know what it feels like to have a question you cannot answer because the tools are out of reach. That is what drives most of what I build - whether that is an RNA-seq pipeline with a sensible interface, a flow cytometry tool that a non-programmer can actually run, or an event that gets ML researchers and biologists in the same room. I want AI to be something scientists just use, the way they use R or a pipette.
+      </p>
+    </div>
+
+    <div>
+      <p class="models-intro">Some foundation models worth knowing about</p>
+      <div class="models-grid">
+
+        <div class="model-card">
+          <div class="model-name">AlphaFold 2 &amp; 3</div>
+          <div class="model-org">DeepMind / Google</div>
+          <div class="model-desc">Predicted the 3D structure of virtually every known protein. AlphaFold 3 extends this to DNA, RNA, and small molecules, which opens up a lot of new possibilities for drug design.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">ESM-2 &amp; ESMFold</div>
+          <div class="model-org">Meta AI</div>
+          <div class="model-desc">Protein language models trained on 250M sequences. Encode evolutionary relationships and enable zero-shot fitness and function prediction - the models I've used directly in my own research.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">Evo</div>
+          <div class="model-org">Arc Institute</div>
+          <div class="model-desc">A genomic foundation model trained across the tree of life - 7B parameters on DNA - enabling generative design of genes, regulatory elements, and CRISPR guides.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">RFdiffusion</div>
+          <div class="model-org">Baker Lab, UW</div>
+          <div class="model-desc">Generative diffusion model for de novo protein design. Can hallucinate functional proteins - binders, enzymes, vaccine candidates - from scratch, with experimental validation.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">Geneformer</div>
+          <div class="model-org">Broad Institute</div>
+          <div class="model-desc">A transformer pre-trained on 30M single-cell transcriptomes. Enables in silico gene perturbation and network inference without costly wet-lab experiments.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">scGPT</div>
+          <div class="model-org">University of Toronto</div>
+          <div class="model-desc">Foundation model for single-cell biology - pre-trained on 33M cells across tissues. Enables cell type annotation, perturbation response prediction, and GRN inference.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">GeminiMol / MolBERT</div>
+          <div class="model-org">Various</div>
+          <div class="model-desc">Molecular foundation models trained on SMILES and 3D conformers, useful for property prediction, virtual screening, and de novo drug design.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">TxGNN</div>
+          <div class="model-org">Harvard / Broad</div>
+          <div class="model-desc">Graph neural network trained on biomedical knowledge graphs to predict drug indications and contraindications - useful for identifying new uses for existing drugs.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">BioNeMo</div>
+          <div class="model-org">NVIDIA</div>
+          <div class="model-desc">A platform for training and deploying biological foundation models - wrapping models like ESMFold, MolMIM, and DiffDock behind accessible APIs so researchers can use them without managing the underlying infrastructure themselves.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">DiffDock &amp; MolMIM</div>
+          <div class="model-org">NVIDIA / MIT</div>
+          <div class="model-desc">DiffDock uses diffusion to predict how a drug molecule binds to a protein target - much faster than traditional docking methods. MolMIM generates novel molecules optimised for specific properties.</div>
+        </div>
+
+      </div>
+      <p class="models-footer">Getting these models into the hands of researchers who know what to do with the biology is a different challenge to building them. There is also a broader shift happening in how pharma companies are approaching this - worth a longer look in the blog.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ── PROJECTS ── -->
 <section class="projects-section" id="projects">
   <p class="sec-label">Projects &amp; Hackathons</p>
-  <h2 class="sec-h">Work that pushed boundaries.</h2>
-  <p class="sec-sub">A mix of research tools, hackathon wins, and side projects — each one built around a question worth answering.</p>
+  <h2 class="sec-h">Things I've built and worked on.</h2>
+  <p class="sec-sub">A mix of published tools, hackathon projects, and pipelines built for real research problems.</p>
   <div class="proj-grid">
 
     <div class="proj-card">
@@ -350,7 +420,7 @@ footer span{color:var(--terra-light);}
       <div class="proj-top moss"></div>
       <div class="proj-body">
         <span class="proj-tag moss">Cancer Genomics</span>
-        <h3>DrivR-Base — variant annotation toolkit</h3>
+        <h3>DrivR-Base - variant annotation toolkit</h3>
         <p>Published a data mining toolkit integrating molecular annotations for SNVs, creating a centralised resource that reduces redundancy and accelerates machine learning model development for variant effect prediction.</p>
         <div class="stack"><span class="pill">Python</span><span class="pill">R</span><span class="pill">Docker</span><span class="pill">COSMIC</span><span class="pill">GnomAD</span></div>
         <a class="proj-link" href="https://doi.org/10.1093/bioinformatics/btae197">Read paper</a>
@@ -384,41 +454,28 @@ footer span{color:var(--terra-light);}
 
 <!-- ── SKILLS ── -->
 <section class="skills-section" id="skills">
-
-  <!--
-    SWAP IN YOUR STAG HERE (skills background ghost)
-    <div class="stag-skill-wrap">
-      <img src="stag.svg" alt="">
-    </div>
-  -->
+  <!-- STAG PLACEHOLDER: <div class="stag-skill-wrap"><img src="stag.svg" alt=""></div> -->
   <div class="stag-skill-wrap"><!-- YOUR STAG SVG GOES HERE --></div>
 
   <p class="sec-label">Skills &amp; Tools</p>
   <h2 class="sec-h">The craft behind the work.</h2>
-  <p class="sec-sub">Built across academia, industry, and the spaces in between.</p>
+  <p class="sec-sub">Picked up across academia, industry, and a few hackathons.</p>
   <div class="sk-grid">
 
     <div class="sk-group">
       <h4>Languages &amp; Systems</h4>
       <ul class="sk-list">
-        <li>Python</li>
-        <li>R</li>
-        <li>SQL</li>
-        <li>Linux / HPC</li>
-        <li>Cloud platforms</li>
-        <li>Docker</li>
+        <li>Python</li><li>R</li><li>SQL</li>
+        <li>Linux / HPC</li><li>Cloud platforms</li><li>Docker</li>
       </ul>
     </div>
 
     <div class="sk-group">
       <h4>Machine Learning</h4>
       <ul class="sk-list">
-        <li>Scikit-learn</li>
-        <li>XGBoost / SVMs</li>
-        <li>Neural Networks</li>
-        <li>Protein Language Models</li>
-        <li>TensorFlow / PyTorch</li>
-        <li>MLflow</li>
+        <li>Scikit-learn</li><li>XGBoost / SVMs</li>
+        <li>Neural Networks</li><li>Foundation &amp; Language Models</li>
+        <li>TensorFlow / PyTorch</li><li>MLflow</li>
       </ul>
     </div>
 
@@ -431,7 +488,7 @@ footer span{color:var(--terra-light);}
         <li>Differential expression: edgeR, limma</li>
         <li>Unsupervised ML for cell population definition</li>
         <li>Immunology cell type characterisation</li>
-        <li>Clustering &amp; dimensionality reduction (UMAP, t-SNE)</li>
+        <li>UMAP / t-SNE dimensionality reduction</li>
         <li>Pathway &amp; gene set enrichment analysis</li>
       </ul>
     </div>
@@ -484,21 +541,21 @@ footer span{color:var(--terra-light);}
     <div class="pub-item">
       <span class="pub-type">Journal Article · 2026</span>
       <div class="pub-title">CanDrivR-CS: A Cancer-Specific Machine Learning Framework for Distinguishing Recurrent and Rare Variants</div>
-      <div class="pub-journal">Bioinformatics Advances — Accepted &amp; Published</div>
+      <div class="pub-journal">Bioinformatics Advances - Accepted &amp; Published</div>
       <a class="pub-doi" href="https://doi.org/10.1093/bioadv/vbag008" target="_blank">doi.org/10.1093/bioadv/vbag008</a>
     </div>
 
     <div class="pub-item">
       <span class="pub-type">Application Note · 2024</span>
       <div class="pub-title">DrivR-Base: A Feature Extraction Toolkit For Variant Effect Prediction Model Construction</div>
-      <div class="pub-journal">Bioinformatics — Accepted &amp; Published</div>
+      <div class="pub-journal">Bioinformatics - Accepted &amp; Published</div>
       <a class="pub-doi" href="https://doi.org/10.1093/bioinformatics/btae197" target="_blank">doi.org/10.1093/bioinformatics/btae197</a>
     </div>
 
     <div class="pub-item">
       <span class="pub-type">Review Article · 2023</span>
       <div class="pub-title">Predicting Pathogenicity from Non-Coding Mutations</div>
-      <div class="pub-journal">Nature Biomedical Engineering — Accepted &amp; Published</div>
+      <div class="pub-journal">Nature Biomedical Engineering - Accepted &amp; Published</div>
       <a class="pub-doi" href="https://doi.org/10.1038/s41551-022-00996-x" target="_blank">doi.org/10.1038/s41551-022-00996-x</a>
     </div>
 
@@ -517,17 +574,19 @@ footer span{color:var(--terra-light);}
   <div class="contact-left">
     <p class="sec-label">Get in touch</p>
     <h2 class="sec-h">Let's build something worth building.</h2>
-    <p>Whether you're interested in collaborating on a project, discussing data science in the life sciences, or exploring consultancy — I'd love to hear from you.</p>
+    <p>Whether you're interested in collaborating on a project, talking about AI in the life sciences, or exploring consultancy - I'd love to hear from you.</p>
     <div class="channels">
-      <a class="channel" href="mailto:amyfrancis1997@hotmail.com">
+
+      <a class="channel" href="/cdn-cgi/l/email-protection#e584889c8397848b868c96d4dcdcd2a58d8a9188848c89cb868a88">
         <div class="ch-icon">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--shell)" stroke-width="2" stroke-linecap="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
         </div>
-        <div class="ch-info"><strong>Email</strong><span>amyfrancis1997@hotmail.com</span></div>
+        <div class="ch-info"><strong>Email</strong><span><span class="__cf_email__" data-cfemail="4e2f2337283c2f202d273d7f7777790e26213a232f2722602d2123">[email&#160;protected]</span></span></div>
       </a>
+
       <a class="channel" href="https://github.com/amyfrancis97" target="_blank">
         <div class="ch-icon">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--shell)">
@@ -536,6 +595,7 @@ footer span{color:var(--terra-light);}
         </div>
         <div class="ch-info"><strong>GitHub</strong><span>github.com/amyfrancis97</span></div>
       </a>
+
       <a class="channel" href="https://linkedin.com/in/Amy-Francis2409" target="_blank">
         <div class="ch-icon">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--shell)">
@@ -545,22 +605,52 @@ footer span{color:var(--terra-light);}
         </div>
         <div class="ch-info"><strong>LinkedIn</strong><span>linkedin.com/in/Amy-Francis2409</span></div>
       </a>
+
     </div>
   </div>
 
   <div class="contact-form">
     <div class="fg"><label>Your name</label><input type="text" placeholder="Jane Smith"></div>
     <div class="fg"><label>Email address</label><input type="email" placeholder="jane@example.com"></div>
-    <div class="fg"><label>Message</label><textarea rows="5" placeholder="Tell me what you're working on..."></textarea></div>
+    <div class="fg"><label>What are you working on?</label><textarea rows="5" placeholder="Tell me about your project or question..."></textarea></div>
     <button class="btn-p" style="width:100%">Send message</button>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-<footer>
-  <div>© 2026 Amy Francis · All rights reserved</div>
-  <div>Senior Data Scientist · <span>Bristol, UK</span></div>
-</footer>
+<!-- ── BLOG TEASER ── -->
+<section style="background:var(--sand);padding:5.5rem 7vw;">
+  <p class="sec-label">Writing</p>
+  <h2 class="sec-h">Thinking out loud.</h2>
+  <p class="sec-sub">Longer pieces on AI in drug discovery, making ML tools accessible to biologists, and what is actually changing in the industry - as opposed to what people say is changing.</p>
 
-</body>
-</html>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;">
+
+    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--terra);opacity:0.7;">
+      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);margin-bottom:0.8rem;">Coming soon</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">Why pharma is partnering with Cradle, Twist, and Recursion instead of building in-house</h3>
+      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">The shift from big in-house R&amp;D to targeted technology partnerships - what is driving it, what it means for drug timelines, and whether it will actually produce better medicines.</p>
+    </div>
+
+    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--moss);opacity:0.7;">
+      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--moss);margin-bottom:0.8rem;">Coming soon</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">What NVIDIA's BioNeMo actually means for wet-lab scientists</h3>
+      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">A practical look at what BioNeMo, DiffDock, and the broader NVIDIA biology stack make possible - and what still needs a specialist to get right.</p>
+    </div>
+
+    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--terra-light);opacity:0.7;">
+      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra-light);margin-bottom:0.8rem;">Coming soon</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">Could AI get better drugs to market faster - and what would that actually take?</h3>
+      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">On exploring new molecular spaces, reducing side effects by design, and what the clinical trial pipeline looks like in a world where candidate selection is partly AI-driven.</p>
+    </div>
+
+    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--moss);opacity:0.7;">
+      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--moss);margin-bottom:0.8rem;">Coming soon</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">Why the best science teams are rarely made of scientists</h3>
+      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">On what actually makes interdisciplinary teams work in practice - diversity of background, the friction that comes with it, and why that friction is usually the point. Written from experience leading teams that won by thinking across disciplines, not within them.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<foote
