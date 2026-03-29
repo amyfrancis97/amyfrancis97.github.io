@@ -206,6 +206,7 @@ footer span{color:var(--terra-light);}
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -617,46 +618,136 @@ footer span{color:var(--terra-light);}
   </div>
 </section>
 
-<!-- ── BLOG TEASER ── -->
-<section style="background:var(--sand);padding:5.5rem 7vw;">
+<!-- ── BLOG ── -->
+<section id="blog" style="background:var(--sand);padding:5.5rem 7vw;">
   <p class="sec-label">Writing</p>
   <h2 class="sec-h">Thinking out loud.</h2>
-  <p class="sec-sub">Longer pieces on AI in drug discovery, making ML tools accessible to biologists, and what is actually changing in the industry - as opposed to what people say is changing.</p>
+  <p class="sec-sub">Pieces on AI in drug discovery, the biology tools worth knowing about, and what is actually changing in the industry - across four themes.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;">
+  <!-- Tab bar -->
+  <div id="blog-tabs" style="display:flex;gap:0;margin-bottom:2.5rem;border-bottom:1px solid var(--sand-dark);flex-wrap:wrap;">
+    <button class="btab active" data-cat="all"     onclick="filterBlog('all',this)">All</button>
+    <button class="btab"        data-cat="opinion"  onclick="filterBlog('opinion',this)">Opinion</button>
+    <button class="btab"        data-cat="industry" onclick="filterBlog('industry',this)">Industry &amp; Research</button>
+    <button class="btab"        data-cat="technical" onclick="filterBlog('technical',this)">Technical</button>
+    <button class="btab"        data-cat="tutorial" onclick="filterBlog('tutorial',this)">Tutorials &amp; Guides</button>
+  </div>
 
-    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--terra);opacity:0.7;">
-      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);margin-bottom:0.8rem;">Coming soon</p>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">Why pharma is partnering with Cradle, Twist, and Recursion instead of building in-house</h3>
-      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">The shift from big in-house R&amp;D to targeted technology partnerships - what is driving it, what it means for drug timelines, and whether it will actually produce better medicines.</p>
+  <style>
+    .btab{background:none;border:none;padding:0.65rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.15s,border-color 0.15s;}
+    .btab:hover{color:var(--ink);}
+    .btab.active{color:var(--terra);border-bottom-color:var(--terra);}
+    .bcard{background:var(--shell);border-radius:4px;padding:1.8rem;display:flex;flex-direction:column;gap:0.55rem;transition:transform 0.18s,opacity 0.18s;}
+    .bcard:hover{transform:translateY(-3px);}
+    .bcard.hidden{display:none;}
+    .bcard.live{opacity:1;cursor:pointer;}
+    .bcard.soon{opacity:0.65;cursor:default;}
+    .bcard a{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0.55rem;flex:1;}
+    .bcat{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;}
+    .bcat.opinion  {color:var(--terra);}
+    .bcat.industry {color:var(--moss);}
+    .bcat.technical{color:#4A6FA5;}
+    .bcat.tutorial {color:var(--terra-light);}
+    .btop-opinion  {border-top:3px solid var(--terra);}
+    .btop-industry {border-top:3px solid var(--moss);}
+    .btop-technical{border-top:3px solid #4A6FA5;}
+    .btop-tutorial {border-top:3px solid var(--terra-light);}
+    .bstatus{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
+    .bstatus.live{color:var(--moss);}
+    .btitle{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.3;}
+    .bdesc{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-top:0.1rem;}
+    .bread{font-size:11px;font-weight:500;color:var(--terra);letter-spacing:0.07em;text-transform:uppercase;margin-top:0.4rem;}
+    #blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.3rem;}
+  </style>
+
+  <div id="blog-grid">
+
+    <!-- OPINION -->
+    <div class="bcard live btop-opinion" data-cat="opinion">
+      <a href="blog-interdisciplinary-teams.html">
+        <span class="bcat opinion">Opinion</span>
+        <span class="bstatus live">Published</span>
+        <span class="btitle">Great science needs more than scientists</span>
+        <span class="bdesc">On what actually makes interdisciplinary teams work - diversity of background, the friction that comes with it, and why that friction is usually the point. Draws on three very different collaborative experiences.</span>
+        <span class="bread">Read post →</span>
+      </a>
     </div>
 
-    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--moss);opacity:0.7;">
-      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--moss);margin-bottom:0.8rem;">Coming soon</p>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">What NVIDIA's BioNeMo actually means for wet-lab scientists</h3>
-      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">A practical look at what BioNeMo, DiffDock, and the broader NVIDIA biology stack make possible - and what still needs a specialist to get right.</p>
+    <div class="bcard soon btop-opinion" data-cat="opinion">
+      <span class="bcat opinion">Opinion</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">What makes a team actually work - on feedback, trust, and creating space for honest challenge</span>
+      <span class="bdesc">The leadership questions that rarely get asked directly: how to build teams where people feel safe enough to disagree, how to give feedback that lands well, and why psychological safety is not a soft metric.</span>
     </div>
 
-    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--terra-light);opacity:0.7;">
-      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra-light);margin-bottom:0.8rem;">Coming soon</p>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">Could AI get better drugs to market faster - and what would that actually take?</h3>
-      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">On exploring new molecular spaces, reducing side effects by design, and what the clinical trial pipeline looks like in a world where candidate selection is partly AI-driven.</p>
+    <!-- INDUSTRY & RESEARCH -->
+    <div class="bcard soon btop-industry" data-cat="industry">
+      <span class="bcat industry">Industry &amp; Research</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">Why pharma is partnering with Cradle, Twist, and Recursion instead of building in-house</span>
+      <span class="bdesc">The shift from big in-house R&amp;D to targeted technology partnerships - what is driving it, what it means for drug timelines, and whether it will actually produce better medicines.</span>
     </div>
 
-    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--moss);opacity:0.7;">
-      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--moss);margin-bottom:0.8rem;">Coming soon</p>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">Great science needs more than scientists</h3>
-      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">On what actually makes interdisciplinary teams work in practice - diversity of background, the friction that comes with it, and why that friction is usually the point. Written from experience leading teams across Cambridge, the Wellcome Collection, and the Alan Turing Institute.</p>
+    <div class="bcard soon btop-industry" data-cat="industry">
+      <span class="bcat industry">Industry &amp; Research</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">Could AI get better drugs to market faster - and what would that actually take?</span>
+      <span class="bdesc">On exploring new molecular spaces, reducing side effects by design, and what the clinical pipeline looks like when candidate selection is partly AI-driven.</span>
     </div>
 
-    <div style="background:var(--shell);border-radius:4px;padding:1.8rem;border-top:3px solid var(--moss);opacity:0.7;">
-      <p style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--moss);margin-bottom:0.8rem;">Coming soon</p>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.3;">What makes a team actually work - on feedback, trust, and creating space for honest challenge</h3>
-      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">The leadership questions that rarely get asked directly: how to build teams where people feel safe enough to disagree, how to give feedback that lands well, and why psychological safety is not a soft metric - it is what makes everything else possible.</p>
+    <!-- TECHNICAL -->
+    <div class="bcard soon btop-technical" data-cat="technical">
+      <span class="bcat technical">Technical</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">What NVIDIA's BioNeMo actually means for wet-lab scientists</span>
+      <span class="bdesc">A practical look at what BioNeMo, DiffDock, and the broader NVIDIA biology stack make possible - and what still needs a specialist to get right.</span>
+    </div>
+
+    <div class="bcard soon btop-technical" data-cat="technical">
+      <span class="bcat technical">Technical</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">Using ESM-2 to predict protein fitness - a walkthrough with real data</span>
+      <span class="bdesc">A hands-on look at Meta's protein language model: what it actually does, how to run it, and how to interpret the output in a biological context.</span>
+    </div>
+
+    <div class="bcard soon btop-technical" data-cat="technical">
+      <span class="bcat technical">Technical</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">Unsupervised ML for immune cell population discovery in RNA-seq data</span>
+      <span class="bdesc">From alignment to UMAP - how to use clustering and dimensionality reduction to define cell populations without prior labels, and what to watch out for when you do.</span>
+    </div>
+
+    <!-- TUTORIALS -->
+    <div class="bcard soon btop-tutorial" data-cat="tutorial">
+      <span class="bcat tutorial">Tutorials &amp; Guides</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">RNA-seq from scratch - a practical guide for biologists who have never touched the command line</span>
+      <span class="bdesc">A step-by-step walkthrough of a full RNA-seq pipeline - from raw FASTQ files to differential expression results - written for researchers with domain knowledge but no computational background.</span>
+    </div>
+
+    <div class="bcard soon btop-tutorial" data-cat="tutorial">
+      <span class="bcat tutorial">Tutorials &amp; Guides</span>
+      <span class="bstatus">Coming soon</span>
+      <span class="btitle">What AlphaFold actually gives you - and how to make sense of it</span>
+      <span class="bdesc">A plain-language guide to interpreting AlphaFold output: confidence scores, what pLDDT means in practice, and how to decide whether a predicted structure is actually useful for your question.</span>
     </div>
 
   </div>
 </section>
+
+<script>
+function filterBlog(cat, btn) {
+  document.querySelectorAll('.btab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.bcard').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+</script>
 
 <!-- ── FOOTER ── -->
 <foote
