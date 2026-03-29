@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amy Francis PhD — Senior Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand:#F5EFE0; --sand-dark:#E8DEC8; --terra:#C4622D; --terra-light:#D4824D;
+  --terra-deep:#8B3A18; --moss:#5C6B48; --ink:#2A1F14; --ink-light:#4A3828;
+  --muted:#7A6B5A; --shell:#FAF6ED;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--shell);color:var(--ink);font-size:16px;line-height:1.7;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:flex;justify-content:space-between;align-items:center;background:rgba(245,239,224,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--sand-dark);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:var(--terra);}
+
+/* ── HERO ── */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--sand);}
+
+/*
+  ============================================================
+  STAG PLACEHOLDER
+  ============================================================
+  Replace the .stag-hero <img> src below with your chosen
+  silhouette. Good free sources:
+    • https://svgsilh.com  (search "stag" or "deer")
+    • https://thenounproject.com  (filter: free / CC)
+    • https://www.flaticon.com  (filter: free)
+
+  Download as SVG, save alongside index.html, then either:
+    a) <img class="stag-hero" src="stag.svg" alt="">
+    b) Paste the raw <svg> tag directly in place of the <img>
+
+  The CSS below handles the fade-mask effect automatically.
+  ============================================================
+*/
+.stag-hero{
+  position:absolute;right:-2vw;bottom:0;
+  width:48vw;max-width:640px;
+  pointer-events:none;
+  opacity:0.15;
+  mask-image:radial-gradient(ellipse 80% 90% at 60% 55%, black 25%, transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 90% at 60% 55%, black 25%, transparent 72%);
+}
+
+/* Tint the SVG to match ink colour — works on inline SVGs and same-origin <img> */
+.stag-hero svg, .stag-hero img { width:100%; height:auto; display:block; filter:brightness(0); }
+
+.hero-content{position:relative;z-index:2;padding:7rem 7vw;max-width:620px;}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:1.1rem;}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6.5vw,5rem);font-weight:600;line-height:1.05;color:var(--ink);margin-bottom:0.3rem;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.2vw,1.4rem);font-style:italic;color:var(--terra);margin-bottom:1.6rem;}
+.hero-bio{font-size:0.97rem;color:var(--ink-light);max-width:500px;margin-bottom:2.2rem;line-height:1.85;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.2rem;}
+.hero-tag{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--moss);background:rgba(92,107,72,0.12);padding:4px 10px;border-radius:2px;}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-p{display:inline-block;padding:0.7rem 1.7rem;background:var(--terra);color:var(--shell);border-radius:2px;font-size:14px;font-weight:500;text-decoration:none;letter-spacing:0.04em;transition:background 0.2s;border:none;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.btn-p:hover{background:var(--terra-deep);}
+.btn-g{display:inline-block;padding:0.7rem 1.7rem;background:transparent;color:var(--ink);border:1px solid var(--ink-light);border-radius:2px;font-size:14px;font-weight:500;text-decoration:none;letter-spacing:0.04em;transition:border-color 0.2s,color 0.2s;}
+.btn-g:hover{border-color:var(--terra);color:var(--terra);}
+
+section{padding:5.5rem 7vw;}
+.sec-label{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:0.7rem;}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:600;color:var(--ink);margin-bottom:0.9rem;line-height:1.2;}
+.sec-sub{font-size:0.97rem;color:var(--muted);max-width:560px;margin-bottom:2.8rem;line-height:1.8;}
+
+/* ── ABOUT ── */
+.about-section{background:var(--sand);display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start;}
+.about-img{width:100%;aspect-ratio:3/4;background:var(--sand-dark);border-radius:4px;position:relative;overflow:visible;display:flex;align-items:center;justify-content:center;}
+
+/*
+  ============================================================
+  ABOUT SECTION STAG — same swap instructions as hero above.
+  Use a smaller version of the same silhouette, or the same file.
+  ============================================================
+*/
+.stag-about{width:70%;opacity:0.22;filter:brightness(0);}
+
+.badge{position:absolute;bottom:-1.2rem;right:-1.2rem;background:var(--terra);color:var(--shell);padding:1.1rem 1.4rem;border-radius:2px;text-align:center;line-height:1.3;}
+.badge strong{display:block;font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;}
+.badge span{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;}
+.about-text h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:var(--moss);margin-bottom:0.9rem;}
+.about-text p{color:var(--ink-light);margin-bottom:1.1rem;line-height:1.85;font-size:0.95rem;}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-top:1.8rem;}
+.fact{padding:0.9rem;background:var(--shell);border-left:2px solid var(--terra);}
+.fact-l{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem;}
+.fact-v{font-size:0.88rem;font-weight:500;color:var(--ink);}
+
+/* ── WINS BAR ── */
+.wins-bar{background:var(--terra);padding:2rem 7vw;display:flex;gap:3rem;flex-wrap:wrap;align-items:center;}
+.win-item{color:var(--shell);}
+.win-item strong{display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;}
+.win-item span{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.8;}
+.win-divider{width:1px;background:rgba(250,246,237,0.3);height:50px;}
+
+/* ── PROJECTS ── */
+.projects-section{background:var(--shell);}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.4rem;}
+.proj-card{background:var(--sand);border-radius:4px;overflow:hidden;transition:transform 0.22s;}
+.proj-card:hover{transform:translateY(-4px);}
+.proj-top{height:7px;background:var(--terra);}
+.proj-top.moss{background:var(--moss);}
+.proj-top.terra2{background:var(--terra-light);}
+.proj-body{padding:1.6rem;}
+.proj-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);background:rgba(196,98,45,0.1);padding:3px 8px;border-radius:2px;margin-bottom:0.9rem;}
+.proj-tag.moss{color:var(--moss);background:rgba(92,107,72,0.1);}
+.proj-tag.neutral{color:var(--ink-light);background:rgba(42,31,20,0.08);}
+.proj-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem;line-height:1.25;}
+.proj-card p{font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:1.2rem;}
+.stack{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.1rem;}
+.pill{font-size:10px;font-family:monospace;color:var(--ink-light);background:var(--sand-dark);padding:2px 7px;border-radius:2px;}
+.proj-link{font-size:11px;font-weight:500;color:var(--terra);text-decoration:none;letter-spacing:0.07em;text-transform:uppercase;}
+.proj-link::after{content:' →';}
+
+/* ── SKILLS ── */
+.skills-section{background:var(--ink);color:var(--shell);position:relative;overflow:hidden;}
+.skills-section .sec-label{color:var(--terra-light);}
+.skills-section .sec-h{color:var(--shell);}
+.skills-section .sec-sub{color:rgba(250,246,237,0.5);}
+
+/*
+  ============================================================
+  SKILLS SECTION STAG BACKGROUND
+  Same swap — place your stag SVG/img inside .stag-skill-wrap
+  ============================================================
+*/
+.stag-skill-wrap{position:absolute;right:-60px;bottom:-30px;width:36vw;max-width:420px;opacity:0.06;pointer-events:none;filter:brightness(10);}
+.stag-skill-wrap img, .stag-skill-wrap svg{width:100%;height:auto;display:block;}
+
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;position:relative;z-index:2;}
+.sk-group{padding:1.6rem;border:1px solid rgba(250,246,237,0.1);border-radius:4px;}
+.sk-group h4{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra-light);margin-bottom:0.9rem;}
+.sk-list{list-style:none;}
+.sk-list li{font-size:0.88rem;color:rgba(250,246,237,0.72);padding:0.28rem 0;border-bottom:1px solid rgba(250,246,237,0.05);display:flex;align-items:center;gap:7px;}
+.sk-list li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--terra-light);flex-shrink:0;}
+
+/* ── PUBLICATIONS ── */
+.pubs-section{background:var(--sand);}
+.pub-list{display:flex;flex-direction:column;gap:1.2rem;}
+.pub-item{background:var(--shell);padding:1.5rem;border-radius:4px;border-left:3px solid var(--terra);display:flex;flex-direction:column;gap:0.4rem;}
+.pub-type{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);}
+.pub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.3;}
+.pub-journal{font-size:0.85rem;color:var(--muted);font-style:italic;}
+.pub-doi{font-size:0.8rem;color:var(--terra);text-decoration:none;font-family:monospace;}
+.pub-doi:hover{text-decoration:underline;}
+
+/* ── CONTACT ── */
+.contact-section{background:var(--shell);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.contact-left p{color:var(--muted);margin-bottom:1.8rem;line-height:1.85;font-size:0.95rem;}
+.channels{display:flex;flex-direction:column;gap:0.9rem;}
+.channel{display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;background:var(--sand);border-radius:2px;text-decoration:none;color:var(--ink);transition:background 0.2s;}
+.channel:hover{background:var(--sand-dark);}
+.ch-icon{width:34px;height:34px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ch-info strong{display:block;font-size:0.88rem;font-weight:500;color:var(--ink);}
+.ch-info span{font-size:0.78rem;color:var(--muted);}
+.contact-form{background:var(--sand);padding:2.2rem;border-radius:4px;}
+.fg{margin-bottom:1.1rem;}
+.fg label{display:block;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem;}
+.fg input,.fg textarea{width:100%;padding:0.7rem 0.9rem;background:var(--shell);border:1px solid var(--sand-dark);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--ink);outline:none;transition:border-color 0.2s;resize:none;}
+.fg input:focus,.fg textarea:focus{border-color:var(--terra);}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);color:rgba(250,246,237,0.35);padding:1.8rem 7vw;display:flex;justify-content:space-between;align-items:center;font-size:11px;flex-wrap:wrap;gap:0.5rem;}
+footer span{color:var(--terra-light);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:800px){
+  .about-section,.contact-section{grid-template-columns:1fr;gap:2.5rem;}
+  .badge{right:0;bottom:-1rem;}
+  .nav-links{display:none;}
+  .stag-hero{width:85vw;right:-15vw;opacity:0.1;}
+  .wins-bar{gap:1.5rem;}
+  .win-divider{display:none;}
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow  {animation:fadeUp 0.55s ease both;}
+.hero-name{animation:fadeUp 0.55s 0.08s ease both;}
+.hero-title{animation:fadeUp 0.55s 0.16s ease both;}
+.hero-bio {animation:fadeUp 0.55s 0.24s ease both;}
+.hero-tags{animation:fadeUp 0.55s 0.30s ease both;}
+.ctas     {animation:fadeUp 0.55s 0.38s ease both;}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#">Amy Francis, PhD</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+
+  <!--
+    ============================================================
+    SWAP IN YOUR STAG HERE (hero background)
+    ============================================================
+    Option A — link to a downloaded SVG file:
+      <div class="stag-hero">
+        <img src="stag.svg" alt="">
+      </div>
+
+    Option B — paste raw SVG code:
+      <div class="stag-hero">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="...">
+          ... paste SVG content here ...
+        </svg>
+      </div>
+
+    Recommended free sources:
+      https://svgsilh.com/search/#deer   (licence: CC0)
+      https://thenounproject.com         (filter: free)
+    ============================================================
+  -->
+  <div class="stag-hero">
+    <!-- YOUR STAG SVG GOES HERE -->
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Senior Data Scientist · PhD · Computational Biology</p>
+    <h1 class="hero-name">Amy<br>Francis</h1>
+    <p class="hero-title">Bridging machine learning &amp; biological discovery</p>
+    <p class="hero-bio">Data scientist bridging computational biology and experimental research — with expertise in machine learning, bioinformatics, and tool development across cancer genomics, immunology, and drug discovery. I specialise in translating complex analytical approaches into practical solutions, enabling scientists to focus on discovery rather than data processing. I thrive leading interdisciplinary teams, having secured two hackathon first-place wins, and enjoy building environments where collaboration drives breakthroughs.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Cancer Genomics</span>
+      <span class="hero-tag">Drug Discovery</span>
+      <span class="hero-tag">Protein ML</span>
+      <span class="hero-tag">RNA-seq</span>
+      <span class="hero-tag">Team Leadership</span>
+      <span class="hero-tag">2× Hackathon Winner</span>
+    </div>
+    <div class="ctas">
+      <a class="btn-p" href="#projects">View projects</a>
+      <a class="btn-g" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WINS BAR ── -->
+<div class="wins-bar">
+  <div class="win-item">
+    <strong>2×</strong>
+    <span>Hackathon First Place</span>
+  </div>
+  <div class="win-divider"></div>
+  <div class="win-item">
+    <strong>4</strong>
+    <span>Publications</span>
+  </div>
+  <div class="win-divider"></div>
+  <div class="win-item">
+    <strong>PhD</strong>
+    <span>Bioinformatics &amp; ML · Bristol</span>
+  </div>
+  <div class="win-divider"></div>
+  <div class="win-item">
+    <strong>Roche</strong>
+    <span>AI Internship · Basel &amp; Zürich</span>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class="about-section" id="about">
+  <div style="position:relative;">
+    <div class="about-img">
+      <!--
+        SWAP IN YOUR STAG HERE (about panel)
+        <img class="stag-about" src="stag.svg" alt="">
+      -->
+      <div class="stag-about"><!-- YOUR STAG SVG GOES HERE --></div>
+      <div class="badge">
+        <strong>5+</strong>
+        <span>Years Experience</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-text">
+    <p class="sec-label">About me</p>
+    <h2 class="sec-h">Where biology meets<br>machine learning.</h2>
+    <h3>Patient, precise, and always asking the harder question.</h3>
+    <p>I'm a Senior Data Scientist and first hire at Nexus BioQuest, where I established the data science function from scratch — building analytical infrastructure, consulting with clients across pharmaceutical and biotech sectors, and developing tools that make complex data accessible to scientists.</p>
+    <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche in Basel and Zürich, exploring protein language models and antibody optimisation.</p>
+    <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories — at Cambridge and the Wellcome Collection — and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments that make that happen.</p>
+    <div class="facts">
+      <div class="fact"><div class="fact-l">Based in</div><div class="fact-v">Bristol, UK</div></div>
+      <div class="fact"><div class="fact-l">Current role</div><div class="fact-v">Senior Data Scientist, Nexus BioQuest</div></div>
+      <div class="fact"><div class="fact-l">PhD</div><div class="fact-v">Bioinformatics &amp; ML, University of Bristol</div></div>
+      <div class="fact"><div class="fact-l">Open to</div><div class="fact-v">Collaborations &amp; consultancy</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section class="projects-section" id="projects">
+  <p class="sec-label">Projects &amp; Hackathons</p>
+  <h2 class="sec-h">Work that pushed boundaries.</h2>
+  <p class="sec-sub">A mix of research tools, hackathon wins, and side projects — each one built around a question worth answering.</p>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-top"></div>
+      <div class="proj-body">
+        <span class="proj-tag">🏆 1st Place · Cambridge</span>
+        <h3>Mapping novel compounds to biological pathways</h3>
+        <p>Led the winning team at GetSeen Ventures' AI × Cancer Bio Hackathon. Used transformer encoders on SMILES strings and high-content image embeddings from the RxRx3-core dataset to predict molecular pathways. Ongoing collaboration likely to result in publication.</p>
+        <div class="stack"><span class="pill">Transformers</span><span class="pill">SMILES</span><span class="pill">Image Embeddings</span><span class="pill">Drug Discovery</span></div>
+        <a class="proj-link" href="#">View project</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top moss"></div>
+      <div class="proj-body">
+        <span class="proj-tag moss">🏆 1st Place · Wellcome Collection</span>
+        <h3>Deep learning for protein fitness prediction</h3>
+        <p>Led the winning team at the Roche &amp; HDR Hackathon. Encoded protein sequences with pre-trained language models (ESM, AntiBERT) and explored CNNs to model sequence-function relationships using DMS data from Protein Gym. Secured a Roche AI internship as a direct result.</p>
+        <div class="stack"><span class="pill">ESM</span><span class="pill">AntiBERT</span><span class="pill">CNNs</span><span class="pill">DMS</span><span class="pill">PyTorch</span></div>
+        <a class="proj-link" href="#">View project</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top terra2"></div>
+      <div class="proj-body">
+        <span class="proj-tag">Flow Cytometry</span>
+        <h3>Automated flow cytometry analysis pipeline</h3>
+        <p>Built an end-to-end pipeline with an intuitive Streamlit interface, applying unsupervised ML (clustering, dimensionality reduction) to high-dimensional cytometry data. Reduced manual analysis time by 70% and reporting time by 50%.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">Streamlit</span><span class="pill">Scikit-learn</span><span class="pill">Unsupervised ML</span></div>
+        <a class="proj-link" href="#">View project</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top moss"></div>
+      <div class="proj-body">
+        <span class="proj-tag moss">Cancer Genomics</span>
+        <h3>DrivR-Base — variant annotation toolkit</h3>
+        <p>Published a data mining toolkit integrating molecular annotations for SNVs, creating a centralised resource that reduces redundancy and accelerates machine learning model development for variant effect prediction.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">R</span><span class="pill">Docker</span><span class="pill">COSMIC</span><span class="pill">GnomAD</span></div>
+        <a class="proj-link" href="https://doi.org/10.1093/bioinformatics/btae197">Read paper</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top"></div>
+      <div class="proj-body">
+        <span class="proj-tag">Antibody Optimisation</span>
+        <h3>Predicting mutation impact on antibody-antigen binding</h3>
+        <p>At Roche pRED, used TensorFlow models grounded in global epistasis and pre-trained protein language models to predict binding affinity from deep mutational scanning data. Ongoing collaboration with University of Oslo, aiming for publication.</p>
+        <div class="stack"><span class="pill">TensorFlow</span><span class="pill">ESM</span><span class="pill">HPC</span><span class="pill">DMS</span></div>
+        <a class="proj-link" href="#">Global Epistasis repo</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top terra2"></div>
+      <div class="proj-body">
+        <span class="proj-tag neutral">Community</span>
+        <h3>Bristol AI in Health Meeting</h3>
+        <p>Co-organised Bristol's first interdisciplinary AI in Health Meeting in collaboration with the Elizabeth Blackwell Institute. Facilitated cross-disciplinary collaboration that resulted in two interdisciplinary grants for applied AI projects.</p>
+        <div class="stack"><span class="pill">Leadership</span><span class="pill">Event Organisation</span><span class="pill">Grant Facilitation</span></div>
+        <a class="proj-link" href="#">Learn more</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section class="skills-section" id="skills">
+
+  <!--
+    SWAP IN YOUR STAG HERE (skills background ghost)
+    <div class="stag-skill-wrap">
+      <img src="stag.svg" alt="">
+    </div>
+  -->
+  <div class="stag-skill-wrap"><!-- YOUR STAG SVG GOES HERE --></div>
+
+  <p class="sec-label">Skills &amp; Tools</p>
+  <h2 class="sec-h">The craft behind the work.</h2>
+  <p class="sec-sub">Built across academia, industry, and the spaces in between.</p>
+  <div class="sk-grid">
+
+    <div class="sk-group">
+      <h4>Languages &amp; Systems</h4>
+      <ul class="sk-list">
+        <li>Python</li>
+        <li>R</li>
+        <li>SQL</li>
+        <li>Linux / HPC</li>
+        <li>Cloud platforms</li>
+        <li>Docker</li>
+      </ul>
+    </div>
+
+    <div class="sk-group">
+      <h4>Machine Learning</h4>
+      <ul class="sk-list">
+        <li>Scikit-learn</li>
+        <li>XGBoost / SVMs</li>
+        <li>Neural Networks</li>
+        <li>Protein Language Models</li>
+        <li>TensorFlow / PyTorch</li>
+        <li>MLflow</li>
+      </ul>
+    </div>
+
+    <div class="sk-group">
+      <h4>RNA-seq &amp; Transcriptomics</h4>
+      <ul class="sk-list">
+        <li>Alignment: STAR, HISAT2, Salmon</li>
+        <li>QC: FastQC, MultiQC, Trimmomatic</li>
+        <li>Quantification: featureCounts, DESeq2</li>
+        <li>Differential expression: edgeR, limma</li>
+        <li>Unsupervised ML for cell population definition</li>
+        <li>Immunology cell type characterisation</li>
+        <li>Clustering &amp; dimensionality reduction (UMAP, t-SNE)</li>
+        <li>Pathway &amp; gene set enrichment analysis</li>
+      </ul>
+    </div>
+
+    <div class="sk-group">
+      <h4>Bioinformatics &amp; Data</h4>
+      <ul class="sk-list">
+        <li>Flow Cytometry</li>
+        <li>Deep Mutational Scanning</li>
+        <li>CRISPR / Image Analysis</li>
+        <li>COSMIC, GnomAD, TCGA</li>
+        <li>Protein / DNA Sequences</li>
+        <li>Proteomics (Olink)</li>
+      </ul>
+    </div>
+
+    <div class="sk-group">
+      <h4>Visualisation &amp; Comms</h4>
+      <ul class="sk-list">
+        <li>Streamlit</li>
+        <li>Matplotlib / Seaborn</li>
+        <li>Scientific writing</li>
+        <li>Client consultation</li>
+        <li>Conference presenting</li>
+      </ul>
+    </div>
+
+    <div class="sk-group">
+      <h4>Leadership &amp; Collaboration</h4>
+      <ul class="sk-list">
+        <li>Interdisciplinary team leadership</li>
+        <li>Hackathon team lead (2× winner)</li>
+        <li>Cross-functional collaboration</li>
+        <li>User-centred design</li>
+        <li>Grant facilitation</li>
+        <li>CRO client management</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PUBLICATIONS ── -->
+<section class="pubs-section" id="publications">
+  <p class="sec-label">Publications</p>
+  <h2 class="sec-h">Peer-reviewed research.</h2>
+  <p class="sec-sub">Four published works spanning cancer genomics, variant effect prediction, and drug discovery.</p>
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <span class="pub-type">Journal Article · 2026</span>
+      <div class="pub-title">CanDrivR-CS: A Cancer-Specific Machine Learning Framework for Distinguishing Recurrent and Rare Variants</div>
+      <div class="pub-journal">Bioinformatics Advances — Accepted &amp; Published</div>
+      <a class="pub-doi" href="https://doi.org/10.1093/bioadv/vbag008" target="_blank">doi.org/10.1093/bioadv/vbag008</a>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-type">Application Note · 2024</span>
+      <div class="pub-title">DrivR-Base: A Feature Extraction Toolkit For Variant Effect Prediction Model Construction</div>
+      <div class="pub-journal">Bioinformatics — Accepted &amp; Published</div>
+      <a class="pub-doi" href="https://doi.org/10.1093/bioinformatics/btae197" target="_blank">doi.org/10.1093/bioinformatics/btae197</a>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-type">Review Article · 2023</span>
+      <div class="pub-title">Predicting Pathogenicity from Non-Coding Mutations</div>
+      <div class="pub-journal">Nature Biomedical Engineering — Accepted &amp; Published</div>
+      <a class="pub-doi" href="https://doi.org/10.1038/s41551-022-00996-x" target="_blank">doi.org/10.1038/s41551-022-00996-x</a>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-type">Online Report · 2024</span>
+      <div class="pub-title">Toxicity Prediction for Drug Discovery</div>
+      <div class="pub-journal">The Alan Turing Institute, Data Study Group</div>
+      <a class="pub-doi" href="https://doi.org/10.5281/zenodo.13882192" target="_blank">doi.org/10.5281/zenodo.13882192</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+  <div class="contact-left">
+    <p class="sec-label">Get in touch</p>
+    <h2 class="sec-h">Let's build something worth building.</h2>
+    <p>Whether you're interested in collaborating on a project, discussing data science in the life sciences, or exploring consultancy — I'd love to hear from you.</p>
+    <div class="channels">
+      <a class="channel" href="mailto:amy.francis@nexusbioquest.com">
+        <div class="ch-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--shell)" stroke-width="2" stroke-linecap="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="ch-info"><strong>Email</strong><span>amy.francis@nexusbioquest.com</span></div>
+      </a>
+      <a class="channel" href="https://github.com/amyfrancis97" target="_blank">
+        <div class="ch-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--shell)">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </div>
+        <div class="ch-info"><strong>GitHub</strong><span>github.com/amyfrancis97</span></div>
+      </a>
+      <a class="channel" href="https://linkedin.com/in/Amy-Francis2409" target="_blank">
+        <div class="ch-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--shell)">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </div>
+        <div class="ch-info"><strong>LinkedIn</strong><span>linkedin.com/in/Amy-Francis2409</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div class="fg"><label>Your name</label><input type="text" placeholder="Jane Smith"></div>
+    <div class="fg"><label>Email address</label><input type="email" placeholder="jane@example.com"></div>
+    <div class="fg"><label>Message</label><textarea rows="5" placeholder="Tell me what you're working on..."></textarea></div>
+    <button class="btn-p" style="width:100%">Send message</button>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>© 2026 Amy Francis · All rights reserved</div>
+  <div>Senior Data Scientist · <span>Bristol, UK</span></div>
+</footer>
+
+</body>
+</html>
