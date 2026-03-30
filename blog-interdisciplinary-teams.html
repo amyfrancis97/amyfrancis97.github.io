@@ -13,13 +13,11 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'DM Sans',sans-serif;background:var(--shell);color:var(--ink);font-size:16px;line-height:1.7;}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:flex;justify-content:space-between;align-items:center;background:rgba(245,239,224,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--sand-dark);}
 .nav-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink);text-decoration:none;}
 .nav-back{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
 .nav-back:hover{color:var(--terra);}
 .nav-back::before{content:'← ';}
-
 .post-hero{background:var(--sand);padding:9rem 7vw 4rem;border-bottom:1px solid var(--sand-dark);}
 .post-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;flex-wrap:wrap;}
 .post-tag{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);background:rgba(196,98,45,0.1);padding:4px 10px;border-radius:2px;}
@@ -28,18 +26,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 7vw;display:f
 .post-dot{width:3px;height:3px;border-radius:50%;background:var(--sand-dark);display:inline-block;}
 h1.post-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:600;line-height:1.1;color:var(--ink);max-width:820px;margin-bottom:1.4rem;}
 .post-standfirst{font-size:1.1rem;color:var(--ink-light);max-width:680px;line-height:1.8;font-family:'Playfair Display',serif;font-style:italic;font-weight:400;}
-
 .post-body{max-width:680px;margin:0 auto;padding:4rem 7vw;}
 .post-body p{font-size:1rem;color:var(--ink-light);line-height:1.9;margin-bottom:1.6rem;}
 .post-body h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--ink);margin:3rem 0 1rem;line-height:1.25;}
 .post-body h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin:2.2rem 0 0.7rem;font-style:italic;}
 .post-body strong{color:var(--ink);font-weight:500;}
-
 blockquote{border-left:3px solid var(--terra);padding:0.2rem 0 0.2rem 1.8rem;margin:2.5rem 0;font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--ink-light);line-height:1.7;}
-
 .divider{width:40px;height:2px;background:var(--terra);margin:3rem 0;}
-
-/* Experience callout boxes */
 .experience-box{background:var(--sand);border-left:3px solid var(--terra);border-radius:0 4px 4px 0;padding:1.4rem 1.6rem;margin:2.2rem 0;}
 .experience-box .exp-label{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:0.5rem;}
 .experience-box .exp-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;}
@@ -48,25 +41,21 @@ blockquote{border-left:3px solid var(--terra);padding:0.2rem 0 0.2rem 1.8rem;mar
 .experience-box.moss .exp-label{color:var(--moss);}
 .experience-box.terra2{border-left-color:var(--terra-light);}
 .experience-box.terra2 .exp-label{color:var(--terra-light);}
-
 .author-bio{background:var(--sand);border-radius:4px;padding:1.8rem;margin-top:4rem;display:flex;flex-direction:column;gap:0.5rem;}
 .author-bio .label{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);}
 .author-bio .name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--ink);}
 .author-bio .bio{font-size:0.88rem;color:var(--muted);line-height:1.75;}
 .author-bio a{color:var(--terra);text-decoration:none;font-size:0.88rem;font-weight:500;}
 .author-bio a:hover{text-decoration:underline;}
-
 .related{padding:4rem 7vw;background:var(--sand);border-top:1px solid var(--sand-dark);}
 .related .sec-label{font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--terra);margin-bottom:1.5rem;}
 .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
-.related-card{background:var(--shell);padding:1.4rem;border-radius:4px;border-top:3px solid var(--terra-light);}
+.related-card{background:var(--shell);padding:1.4rem;border-radius:4px;}
 .related-card h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;line-height:1.3;}
 .related-card p{font-size:0.83rem;color:var(--muted);line-height:1.65;}
 .related-card .coming{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;}
-
 footer{background:var(--ink);color:rgba(250,246,237,0.35);padding:1.8rem 7vw;display:flex;justify-content:space-between;align-items:center;font-size:11px;flex-wrap:wrap;gap:0.5rem;}
 footer span{color:var(--terra-light);}
-
 @media(max-width:700px){
   .post-hero{padding:8rem 6vw 3rem;}
   .post-body{padding:3rem 6vw;}
@@ -97,73 +86,64 @@ footer span{color:var(--terra-light);}
 
   <p>Over the past few years I have had the chance to work across a fairly wide range of collaborative settings - competitive hackathons, academic research groups, industry internships, a data study group at the Alan Turing Institute. The contexts were different, the problems were different, the people were very different. But one thing kept showing up in roughly the same form.</p>
 
-  <p>The teams that did the most interesting and impactful work were almost never the ones with the deepest shared expertise. They were the ones where people came in with genuinely different mental models, different instincts about what mattered, and different vocabularies for describing the same thing. That combination - uncomfortable as it can sometimes feel in practice - consistently produced better questions, broader solution spaces, and results that none of the individuals involved could have reached working within their own discipline alone.</p>
+  <p>The teams that did the most interesting work were almost never the ones with the deepest shared expertise. They were the ones where people came in with genuinely different mental models, different instincts about what mattered, and different vocabularies for describing the same thing. That combination - uncomfortable as it can sometimes feel - consistently produced better questions, broader solution spaces, and results that none of the individuals involved could have reached working within their own discipline alone.</p>
 
-  <p>I want to try to say something more specific than "diversity is good," because I think the vague version of that argument is easy to agree with and easy to ignore. What I mean is something more concrete.</p>
+  <p>I want to say something more specific than "diversity is good," because the vague version of that argument is easy to agree with and easy to ignore.</p>
 
   <div class="divider"></div>
 
   <h2>Three settings, the same pattern</h2>
 
-  <p>It helps to be specific about where I have seen this, because the pattern becomes more convincing when it holds across settings that are structurally quite different.</p>
+  <p>The pattern becomes more convincing when it holds across settings that are structurally quite different.</p>
 
   <div class="experience-box">
     <div class="exp-label">GetSeen Ventures AI x Cancer Bio Hackathon - Cambridge</div>
     <div class="exp-title">Mapping novel compounds to biological pathways</div>
-    <p class="exp-body">A competitive hackathon with a tight deadline and a hard problem - predicting which biological pathways novel compounds would affect, using high-content imaging data. The team included people from computational chemistry, software engineering, and biology. Nobody had done exactly this before. The solution we built - using transformer encoders on molecular representations alongside image embeddings - came from a conversation between someone who thought about molecules and someone who thought about language models, mediated by someone who understood what the biology actually needed to tell us. No single person had all three pieces.</p>
+    <p class="exp-body">A competitive hackathon with a tight deadline and a hard problem - predicting which biological pathways novel compounds would affect, using high-content imaging data. The team included people from computational chemistry, software engineering, and biology. The solution we built - using transformer encoders on molecular representations alongside image embeddings - came from a conversation between someone who thought about molecules and someone who thought about language models, mediated by someone who understood what the biology actually needed to tell us. No single person had all three pieces.</p>
   </div>
 
   <div class="experience-box moss">
     <div class="exp-label">Roche and Health Data Research UK Hackathon - Wellcome Collection</div>
     <div class="exp-title">Deep learning for protein fitness prediction</div>
-    <p class="exp-body">A similar format, a different problem. Predicting how mutations affect protein function using deep mutational scanning data. The team spanned protein biochemistry, deep learning, and statistics. The biochemist knew which parts of the sequence space were biologically meaningful - which kept the model grounded. The statistician kept asking whether what the model was learning was actually what we thought it was learning - which kept us honest. The ML work sat in the middle, doing neither of those things but depending on both. The result was a model that generalised well precisely because it was built with those constraints in mind from the start.</p>
+    <p class="exp-body">A similar format, a different problem. Predicting how mutations affect protein function using deep mutational scanning data. The team spanned protein biochemistry, deep learning, and statistics. The biochemist knew which parts of the sequence space were biologically meaningful. The statistician kept asking whether what the model was learning was actually what we thought it was learning. The ML work sat in the middle, depending on both. The result was a model that generalised well precisely because it was built with those constraints in mind from the start.</p>
   </div>
 
   <div class="experience-box terra2">
     <div class="exp-label">Alan Turing Institute - Data Study Group</div>
     <div class="exp-title">Toxicity prediction for drug discovery</div>
-    <p class="exp-body">This one was different in character - no competition, no winning team, just a group of researchers brought together to work on a hard problem over a week. That changed the dynamic in an interesting way. Without a competitive frame, the collaboration became more openly exploratory. People were more willing to say they did not understand something, more willing to follow a line of thinking into territory they were not expert in. The output was a published report, but what I remember most is the quality of the conversations - particularly the ones that happened when someone from outside the domain asked a question that the domain experts had stopped asking because they assumed they knew the answer.</p>
+    <p class="exp-body">This one was different in character - no competition, no winning team, just a group of researchers brought together to work on a hard problem over a week. Without a competitive frame, the collaboration became more openly exploratory. People were more willing to say they did not understand something, more willing to follow a line of thinking into territory they were not expert in. The output was a published report, but what I remember most is the quality of the conversations - particularly the ones that happened when someone from outside the domain asked a question that the domain experts had stopped asking because they assumed they knew the answer.</p>
   </div>
 
-  <p>Three different settings, three different problems, three different team compositions. But the same underlying dynamic: the most useful contributions often came from people who were not the deepest experts in the relevant field, and the work benefited from having those people in the room.</p>
+  <p>Three different settings, three different problems, three different team compositions. The same underlying dynamic: the most useful contributions often came from people who were not the deepest experts in the relevant field.</p>
 
   <h2>What diversity of background actually does</h2>
 
-  <p>I want to be specific about the mechanisms here, because "diverse teams do better" without explanation is just an assertion.</p>
-
   <h3>It breaks down jargon</h3>
-
-  <p>Every field has terminology that carries compressed meaning - meaning that can quietly distort how you think about a problem. When someone asks you to explain something without the jargon, you often find that the concept is less solid than you thought, or that the jargon was obscuring an assumption that was worth questioning. This is mildly uncomfortable and consistently useful.</p>
+  <p>Every field has terminology that carries compressed meaning - meaning that can quietly distort how you think about a problem. When someone asks you to explain something without the jargon, you often find the concept is less solid than you thought, or that the jargon was obscuring an assumption worth questioning. This is mildly uncomfortable and consistently useful.</p>
 
   <h3>It widens the solution space</h3>
-
-  <p>A biologist looking at a classification problem will reach for one set of tools. A software engineer will reach for another. A statistician will question whether it is actually a classification problem at all. None of them is wrong. Three different framings of the same problem is more valuable than three people with identical training each arriving at the same framing independently - even if reconciling those framings takes more time upfront.</p>
+  <p>A biologist looking at a classification problem will reach for one set of tools. A software engineer will reach for another. A statistician will question whether it is actually a classification problem at all. Three different framings of the same problem is more valuable than three people with identical training each arriving at the same framing independently - even if reconciling those framings takes more time upfront.</p>
 
   <h3>It produces better questions</h3>
-
-  <p>The questions that come from genuine confusion - from someone who does not understand why you are approaching something a particular way - are frequently the questions that matter most. Not because naivety is a virtue, but because accumulated expertise builds accumulated assumptions, and those assumptions are often invisible from inside the field. An outsider's question cuts through in a way that a colleague's rarely does, because the colleague has the same assumptions.</p>
+  <p>The questions that come from genuine confusion - from someone who does not understand why you are approaching something a particular way - are frequently the ones that matter most. Not because naivety is a virtue, but because accumulated expertise builds accumulated assumptions, and those assumptions are often invisible from inside the field.</p>
 
   <blockquote>"The most useful question I heard in three days of a hackathon came from a software engineer who had never worked in biology. He asked why we were treating the problem as single-stage rather than decomposing it. It was not a biological insight. But none of the biologists had thought to ask it."</blockquote>
 
   <h2>The bridge-builder is the most underrated role in science</h2>
 
-  <p>Something I have come to think is genuinely important, and which I do not see discussed much: in every one of these settings, a significant part of what made things work was not just the diversity of expertise, but the presence of people who could move between domains - who had enough of a foundation in more than one area to translate, to hold context from multiple conversations, to know when two people were actually agreeing without realising it and when they were genuinely at odds.</p>
+  <p>In every one of these settings, a significant part of what made things work was not just the diversity of expertise, but the presence of people who could move between domains - who had enough of a foundation in more than one area to translate, to hold context across multiple conversations, to know when two people were actually agreeing without realising it and when they were genuinely at odds.</p>
 
-  <p>These people - generalists in the best sense, though they dislike that word - are often hard to place in a traditional academic hierarchy. They do not have the deepest publication record in any single area. They are not the most cited person in the room. But they are frequently the reason the room functions. They carry the thread of a conversation across domain lines. They notice when an assumption from one field is about to cause a problem in another. They make introductions - intellectual ones as well as professional ones.</p>
+  <p>These people are often hard to place in a traditional academic hierarchy. They do not have the deepest publication record in any single area. They are not the most cited person in the room. But they are frequently the reason the room functions. They carry the thread of a conversation across domain lines. They notice when an assumption from one field is about to cause a problem in another.</p>
 
-  <p>Good people skills are part of this, but it is more than that. It is a kind of intellectual generosity: a genuine interest in what other people know, and a willingness to do the work of understanding it rather than waiting for it to be translated into your own terms. Combined with enough breadth to actually follow the conversation, that quality is genuinely rare and, in my experience, consistently valuable in ways that are hard to quantify and easy to overlook in hiring.</p>
+  <p>It is a kind of intellectual generosity: a genuine interest in what other people know, and a willingness to do the work of understanding it rather than waiting for it to be translated into your own terms. Combined with enough breadth to actually follow the conversation, that quality is consistently valuable in ways that are hard to quantify and easy to overlook in hiring.</p>
 
   <h2>Why we keep building teams that look the same anyway</h2>
 
-  <p>If diverse teams consistently do better, why are most scientific teams still built around shared expertise? A few reasons that I think are worth naming honestly.</p>
-
   <p>Shared expertise feels safer. A team of specialists who all speak the same language is easier to manage, easier to evaluate, and easier to explain to a funder. The risk is legible. The counterfactual - what might have been discovered by a broader team - is not.</p>
 
-  <p>The incentive structures in academia push against it. Grants, publications, and career progression all reward depth. A researcher who spends time building bridges between disciplines is doing something genuinely valuable that the system has limited ways of recognising or rewarding. That does not make it wrong - but it does make it harder to sustain.</p>
+  <p>The incentive structures in academia push against it. Grants, publications, and career progression all reward depth. A researcher who spends time building bridges between disciplines is doing something genuinely valuable that the system has limited ways of recognising. That does not make it wrong - but it does make it harder to sustain.</p>
 
-  <p>And hiring is hard across domain lines. It is difficult to evaluate someone whose expertise is partly outside your own, which means interdisciplinary candidates often get filtered out early in processes that were designed to find domain specialists. The people who are hardest to evaluate are sometimes exactly the people a team needs most.</p>
-
-  <p>None of these are arguments against trying. They are just honest reasons why it requires deliberate effort rather than happening naturally.</p>
+  <p>Hiring is also hard across domain lines. It is difficult to evaluate someone whose expertise is partly outside your own, which means interdisciplinary candidates often get filtered out early in processes designed to find domain specialists. The people who are hardest to evaluate are sometimes exactly the people a team needs most.</p>
 
   <div class="divider"></div>
 
@@ -174,8 +154,8 @@ footer span{color:var(--terra-light);}
   <div class="author-bio">
     <span class="label">About the author</span>
     <span class="name">Amy Francis, PhD</span>
-    <span class="bio">Senior Data Scientist at Nexus BioQuest, Bristol. Previously AI intern at Roche (Basel and Zurich). PhD in Bioinformatics and Machine Learning from the University of Bristol, funded by Cancer Research UK. Two-time hackathon winner at Cambridge and the Wellcome Collection. Contributor to the Alan Turing Institute Data Study Group.</span>
-    <a href="index.html#contact">Get in touch</a>
+    <span class="bio">Senior Data Scientist at Nexus BioQuest, Bristol. Previously AI intern at Roche (Basel and Zurich). PhD in Bioinformatics and Machine Learning from the University of Bristol, funded by Cancer Research UK. Two-time hackathon winner at Cambridge and the Wellcome Collection. Contributor to the Alan Turing Institute Data Study Group. Views are my own.</span>
+    <a href="index.html#contact">Say hello</a>
   </div>
 
 </div>
@@ -184,22 +164,23 @@ footer span{color:var(--terra-light);}
   <p class="sec-label">More from the blog</p>
   <div class="related-grid">
 
-    <div class="related-card" style="border-top-color:var(--moss);">
+    <div class="related-card" style="border-top:3px solid var(--moss);">
       <p class="coming">Coming soon</p>
       <h4>What makes a team actually work - on feedback, trust, and creating space for honest challenge</h4>
-      <p>The leadership and culture questions that rarely get asked directly: how to build teams where people feel safe enough to disagree, and why that safety is what makes everything else possible.</p>
+      <p>The leadership questions that rarely get asked directly: how to build teams where people feel safe enough to disagree, how to give feedback that lands well, and why psychological safety is not a soft metric.</p>
     </div>
 
-    <div class="related-card">
-      <p class="coming">Coming soon</p>
-      <h4>Why pharma is partnering with Cradle, Twist and Recursion instead of building in-house</h4>
-      <p>The shift from big in-house R&amp;D to targeted technology partnerships - what is driving it and what it means for drug timelines.</p>
+    <div class="related-card" style="border-top:3px solid var(--moss);">
+      <p class="coming" style="color:var(--moss);">Published</p>
+      <h4>How AI is changing drug discovery - and what the evidence actually says</h4>
+      <p>The industry is reorganising fast. What is actually happening, what the clinical evidence shows, and the honest open questions about whether this means better medicines.</p>
+      <a href="blog-ai-drug-discovery.html" style="font-size:11px;font-weight:500;color:var(--terra);text-decoration:none;text-transform:uppercase;letter-spacing:0.07em;margin-top:0.5rem;display:inline-block;">Read post →</a>
     </div>
 
-    <div class="related-card">
+    <div class="related-card" style="border-top:3px solid var(--terra-light);opacity:0.7;">
       <p class="coming">Coming soon</p>
-      <h4>Could AI get better drugs to market faster - and what would that actually take?</h4>
-      <p>On new molecular spaces, reducing side effects by design, and what the clinical pipeline looks like when candidate selection is partly AI-driven.</p>
+      <h4>What NVIDIA's BioNeMo actually means for wet-lab scientists</h4>
+      <p>A practical look at what BioNeMo, DiffDock, and the broader NVIDIA biology stack make possible - and what still needs a specialist to get right.</p>
     </div>
 
   </div>
@@ -207,7 +188,7 @@ footer span{color:var(--terra-light);}
 
 <footer>
   <div>© 2026 Amy Francis - All rights reserved</div>
-  <div>Senior Data Scientist - <span>Bristol, UK</span></div>
+  <div>Senior Data Scientist - <span>Bristol, UK</span> - Views are my own</div>
 </footer>
 
 </body>
