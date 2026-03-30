@@ -257,7 +257,7 @@ footer span{color:var(--terra-light);}
     <p class="sec-label">About me</p>
     <h2 class="sec-h">Where biology meets<br>machine learning.</h2>
     <h3>I came from the biology side, and I've always thought the most interesting work happens where disciplines overlap.</h3>
-    <p>I'm a Senior Data Scientist and first hire at Nexus BioQuest, a CRO in Bristol, where I established the data science function from scratch - building analytical infrastructure, consulting with clients across pharmaceutical and biotech sectors, and developing tools that make complex assay data accessible to scientists.</p>
+    <p>I'm a Senior Data Scientist at Nexus BioQuest, a contract research organisation in Bristol, where I work across data science, machine learning, and analytical tool development in support of research programmes spanning pharmaceutical and biotech clients.</p>
     <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche in Basel and Zürich, exploring protein language models and antibody optimisation - and published four peer-reviewed papers across cancer genomics, variant prediction, and drug discovery.</p>
     <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories - at Cambridge and the Wellcome Collection - and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments where that becomes possible.</p>
     <div class="facts">
@@ -278,91 +278,88 @@ footer span{color:var(--terra-light);}
 
   <p class="sec-label">A perspective on AI in science</p>
   <h2 class="sec-h" style="color:var(--shell);">AI is going to be part of everyday science.<br>It should work for everyone.</h2>
-  <p class="sec-sub">Science is changing fast, and AI is a big part of why. The question worth asking is not what these tools can do in theory - it's who actually gets to use them.</p>
+  <p class="sec-sub">The tools exist. The clinical evidence is starting to follow. The harder question is who can actually use them.</p>
 
   <div class="manifesto-inner">
     <div class="manifesto-statement">
       <p class="manifesto-quote">"Some of the most powerful tools in the history of biology are sitting in research papers and GitHub repos that most bench scientists have never heard of. That feels like a problem worth working on."</p>
       <p class="manifesto-body">
-        The past few years have produced some remarkable models. AlphaFold more or less solved protein structure prediction, a problem that had been open for 50 years. ESM-2 showed that a language model trained on protein sequences alone could pick up on evolutionary relationships that took decades of wet-lab work to characterise. These are not small steps forward - they represent a real change in what is possible.
+        AlphaFold more or less solved protein structure prediction in 2021 - a problem that had been open for 50 years. AI-designed drugs are now reaching clinical trials. The industry is reorganising around this, with pharma companies partnering with specialist AI firms and embedding NVIDIA infrastructure directly into their R&D pipelines. These are not future possibilities. They are happening now, and the pace is accelerating.
       </p>
       <p class="manifesto-body">
-        But using these models well still requires a fairly unusual mix of skills - enough machine learning to run and adapt them, enough compute to actually train or fine-tune them, and enough domain knowledge to know what to do with the output. Most biologists have one of those things, maybe two. The gap between what these tools can do and what most researchers can access is real, and it matters.
+        But using these tools well still requires an unusual combination of skills - enough ML to run and adapt the models, enough compute to work with them, and enough domain knowledge to ask the right questions. Most biologists have one of those things, maybe two. That gap is real, and it matters. I came into data science from the biology side, so I know what it feels like to have a question you cannot answer because the tools are out of reach. That is what drives most of what I build and write about.
       </p>
       <p class="manifesto-body">
-        Something is also shifting in how the industry is organised. Pharmaceutical companies are increasingly partnering with smaller technology companies - Cradle, Twist Bioscience, Recursion, Insilico Medicine - rather than trying to build everything in-house. That collaboration between deep biological knowledge and modern ML tooling is starting to compress drug discovery timelines in ways that would have seemed unlikely five years ago. Whether that means genuinely better drugs, fewer side effects, and access to molecular spaces that were previously out of reach is a question I think about a lot. I write about it in the blog.
-      </p>
-      <p class="manifesto-body">
-        I came into data science from the biology side, so I know what it feels like to have a question you cannot answer because the tools are out of reach. That is what drives most of what I build - whether that is an RNA-seq pipeline with a sensible interface, a flow cytometry tool that a non-programmer can actually run, or an event that gets ML researchers and biologists in the same room. I want AI to be something scientists just use, the way they use R or a pipette.
+        The deeper analysis - the specific partnerships, what the clinical evidence actually shows, what NVIDIA's infrastructure deals mean in practice, and the honest open questions about whether this produces better drugs - is in the blog.
       </p>
     </div>
 
     <div>
-      <p class="models-intro">Some foundation models worth knowing about</p>
+      <p class="models-intro">Foundation models reshaping biology</p>
       <div class="models-grid">
 
         <div class="model-card">
           <div class="model-name">AlphaFold 2 &amp; 3</div>
           <div class="model-org">DeepMind / Google</div>
-          <div class="model-desc">Predicted the 3D structure of virtually every known protein. AlphaFold 3 extends this to DNA, RNA, and small molecules, which opens up a lot of new possibilities for drug design.</div>
+          <div class="model-desc">Predicted structures for 200M+ proteins by 2022. AlphaFold 3 (2024) extends to DNA, RNA, and small molecules - relevant to structure-based drug design.</div>
         </div>
 
         <div class="model-card">
           <div class="model-name">ESM-2 &amp; ESMFold</div>
           <div class="model-org">Meta AI</div>
-          <div class="model-desc">Protein language models trained on 250M sequences. Encode evolutionary relationships and enable zero-shot fitness and function prediction - the models I've used directly in my own research.</div>
+          <div class="model-desc">Protein language models trained on 250M sequences. Enable zero-shot fitness and function prediction - models I've used directly in my own research at Roche.</div>
         </div>
 
         <div class="model-card">
-          <div class="model-name">Evo</div>
+          <div class="model-name">Evo 1 &amp; 2</div>
           <div class="model-org">Arc Institute</div>
-          <div class="model-desc">A genomic foundation model trained across the tree of life - 7B parameters on DNA - enabling generative design of genes, regulatory elements, and CRISPR guides.</div>
+          <div class="model-desc">Genomic foundation models trained across the tree of life on DNA sequences. Enable generative design of genes, regulatory elements, and CRISPR guides.</div>
         </div>
 
         <div class="model-card">
           <div class="model-name">RFdiffusion</div>
           <div class="model-org">Baker Lab, UW</div>
-          <div class="model-desc">Generative diffusion model for de novo protein design. Can hallucinate functional proteins - binders, enzymes, vaccine candidates - from scratch, with experimental validation.</div>
-        </div>
-
-        <div class="model-card">
-          <div class="model-name">Geneformer</div>
-          <div class="model-org">Broad Institute</div>
-          <div class="model-desc">A transformer pre-trained on 30M single-cell transcriptomes. Enables in silico gene perturbation and network inference without costly wet-lab experiments.</div>
-        </div>
-
-        <div class="model-card">
-          <div class="model-name">scGPT</div>
-          <div class="model-org">University of Toronto</div>
-          <div class="model-desc">Foundation model for single-cell biology - pre-trained on 33M cells across tissues. Enables cell type annotation, perturbation response prediction, and GRN inference.</div>
-        </div>
-
-        <div class="model-card">
-          <div class="model-name">GeminiMol / MolBERT</div>
-          <div class="model-org">Various</div>
-          <div class="model-desc">Molecular foundation models trained on SMILES and 3D conformers, useful for property prediction, virtual screening, and de novo drug design.</div>
-        </div>
-
-        <div class="model-card">
-          <div class="model-name">TxGNN</div>
-          <div class="model-org">Harvard / Broad</div>
-          <div class="model-desc">Graph neural network trained on biomedical knowledge graphs to predict drug indications and contraindications - useful for identifying new uses for existing drugs.</div>
+          <div class="model-desc">Diffusion model for de novo protein design - binders, enzymes, vaccine candidates - designed from scratch and experimentally validated.</div>
         </div>
 
         <div class="model-card">
           <div class="model-name">BioNeMo</div>
           <div class="model-org">NVIDIA</div>
-          <div class="model-desc">A platform for training and deploying biological foundation models - wrapping models like ESMFold, MolMIM, and DiffDock behind accessible APIs so researchers can use them without managing the underlying infrastructure themselves.</div>
+          <div class="model-desc">An open platform wrapping biological foundation models - ESMFold, DiffDock, MolMIM - behind accessible APIs. Used by Amgen, Genentech, AstraZeneca, GSK, and Novo Nordisk. Over 100 firms on the platform as of 2024.</div>
         </div>
 
         <div class="model-card">
           <div class="model-name">DiffDock &amp; MolMIM</div>
           <div class="model-org">NVIDIA / MIT</div>
-          <div class="model-desc">DiffDock uses diffusion to predict how a drug molecule binds to a protein target - much faster than traditional docking methods. MolMIM generates novel molecules optimised for specific properties.</div>
+          <div class="model-desc">DiffDock predicts protein-ligand binding poses using diffusion - faster than traditional docking. MolMIM generates novel small molecules optimised for target properties.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">Geneformer</div>
+          <div class="model-org">Broad Institute</div>
+          <div class="model-desc">Transformer pre-trained on 30M single-cell transcriptomes. Supports in silico gene perturbation and network inference - useful for target identification without wet-lab experiments.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">scGPT</div>
+          <div class="model-org">University of Toronto</div>
+          <div class="model-desc">Single-cell foundation model pre-trained on 33M cells. Enables cell type annotation, perturbation prediction, and gene regulatory network inference.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">TxGNN</div>
+          <div class="model-org">Harvard / Broad</div>
+          <div class="model-desc">Graph neural network trained on biomedical knowledge graphs for drug indication and contraindication prediction - a practical tool for repurposing existing compounds.</div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-name">Pharma.AI / INS018_055</div>
+          <div class="model-org">Insilico Medicine</div>
+          <div class="model-desc">End-to-end AI drug discovery platform. Used to design INS018_055, the first fully AI-generated drug to show efficacy in a Phase IIa trial (Nature Biotechnology, 2024). Target to Phase I in under 30 months.</div>
         </div>
 
       </div>
-      <p class="models-footer">Getting these models into the hands of researchers who know what to do with the biology is a different challenge to building them. There is also a broader shift happening in how pharma companies are approaching this - worth a longer look in the blog.</p>
+      <p class="models-footer">The industry case studies are moving fast. I cover specific partnerships, what the deals actually involve, and what they mean for how drugs get made - in the Industry &amp; Research blog posts below.</p>
     </div>
   </div>
 </section>
@@ -401,7 +398,7 @@ footer span{color:var(--terra-light);}
       <div class="proj-body">
         <span class="proj-tag">Flow Cytometry</span>
         <h3>Automated flow cytometry analysis pipeline</h3>
-        <p>Built an end-to-end pipeline with an intuitive Streamlit interface, applying unsupervised ML (clustering, dimensionality reduction) to high-dimensional cytometry data. Reduced manual analysis time by 70% and reporting time by 50%.</p>
+        <p>Built an end-to-end automated analysis pipeline with an intuitive Streamlit interface, applying unsupervised ML - clustering and dimensionality reduction - to high-dimensional cytometry data to uncover patterns and accelerate reporting.</p>
         <div class="stack"><span class="pill">Python</span><span class="pill">Streamlit</span><span class="pill">Scikit-learn</span><span class="pill">Unsupervised ML</span></div>
         <a class="proj-link" href="#">View project</a>
       </div>
@@ -611,7 +608,7 @@ footer span{color:var(--terra-light);}
 <section id="blog" style="background:var(--sand);padding:5.5rem 7vw;">
   <p class="sec-label">Writing</p>
   <h2 class="sec-h">Thinking out loud.</h2>
-  <p class="sec-sub">Pieces on AI in drug discovery, the biology tools worth knowing about, and what is actually changing in the industry - across four themes.</p>
+  <p class="sec-sub">AI is going to reshape how biology is done. I think scientists at every level need to understand what is actually happening - not the hype version, and not the version that assumes a computer science degree. I write here to try to bridge that gap: covering real tools, real evidence, and real implications, in language that a working scientist can use. Four themes: opinion, industry analysis, technical walkthroughs, and practical guides.</p>
 
   <!-- Tab bar -->
   <div id="blog-tabs" style="display:flex;gap:0;margin-bottom:2.5rem;border-bottom:1px solid var(--sand-dark);flex-wrap:wrap;">
@@ -670,18 +667,14 @@ footer span{color:var(--terra-light);}
     </div>
 
     <!-- INDUSTRY & RESEARCH -->
-    <div class="bcard soon btop-industry" data-cat="industry">
-      <span class="bcat industry">Industry &amp; Research</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">Why pharma is partnering with Cradle, Twist, and Recursion instead of building in-house</span>
-      <span class="bdesc">The shift from big in-house R&amp;D to targeted technology partnerships - what is driving it, what it means for drug timelines, and whether it will actually produce better medicines.</span>
-    </div>
-
-    <div class="bcard soon btop-industry" data-cat="industry">
-      <span class="bcat industry">Industry &amp; Research</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">Could AI get better drugs to market faster - and what would that actually take?</span>
-      <span class="bdesc">On exploring new molecular spaces, reducing side effects by design, and what the clinical pipeline looks like when candidate selection is partly AI-driven.</span>
+    <div class="bcard live btop-industry" data-cat="industry">
+      <a href="blog-ai-drug-discovery.html">
+        <span class="bcat industry">Industry &amp; Research</span>
+        <span class="bstatus live">Published</span>
+        <span class="btitle">How AI is changing drug discovery - and what the evidence actually says</span>
+        <span class="bdesc">The industry is reorganising fast - specialist AI partnerships, NVIDIA infrastructure embedded in pharma R&amp;D, and the first AI-designed drugs reaching clinical trials. What is actually happening, what the evidence shows, and the honest open questions.</span>
+        <span class="bread">Read post →</span>
+      </a>
     </div>
 
     <!-- TECHNICAL -->
@@ -739,4 +732,10 @@ function filterBlog(cat, btn) {
 </script>
 
 <!-- ── FOOTER ── -->
-<foote
+<footer>
+  <div>© 2026 Amy Francis · All rights reserved</div>
+  <div>Senior Data Scientist · <span>Bristol, UK</span> · Views are my own</div>
+</footer>
+
+</body>
+</html>
