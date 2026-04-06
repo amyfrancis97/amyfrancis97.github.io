@@ -204,7 +204,6 @@ footer span{color:var(--terra-light);}
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#publications">Publications</a></li>
-    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -242,7 +241,7 @@ footer span{color:var(--terra-light);}
   <div class="win-divider"></div>
   <div class="win-item"><strong>PhD</strong><span>Bioinformatics &amp; ML · Bristol</span></div>
   <div class="win-divider"></div>
-  <div class="win-item"><strong>Roche</strong><span>AI Internship · Basel &amp; Zürich</span></div>
+  <div class="win-item"><strong>Roche</strong><span>AI Internship</span></div>
   <div class="win-divider"></div>
   <div class="win-item"><strong>Nature</strong><span>Biomed Engineering · Published</span></div>
 </div>
@@ -258,7 +257,7 @@ footer span{color:var(--terra-light);}
     <h2 class="sec-h">Where biology meets<br>machine learning.</h2>
     <h3>I came from the biology side, and I've always thought the most interesting work happens where disciplines overlap.</h3>
     <p>I'm a Senior Data Scientist at Nexus BioQuest, a contract research organisation in Bristol, where I work across data science, machine learning, and analytical tool development in support of research programmes spanning pharmaceutical and biotech clients.</p>
-    <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche in Basel and Zürich, exploring protein language models and antibody optimisation - and published four peer-reviewed papers across cancer genomics, variant prediction, and drug discovery.</p>
+    <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche, exploring protein language models and antibody optimisation - and published peer-reviewed papers in variant effect prediction.</p>
     <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories - at Cambridge and the Wellcome Collection - and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments where that becomes possible.</p>
     <div class="facts">
       <div class="fact"><div class="fact-l">Based in</div><div class="fact-v">Bristol, UK</div></div>
@@ -287,10 +286,10 @@ footer span{color:var(--terra-light);}
         AlphaFold more or less solved protein structure prediction in 2021 - a problem that had been open for 50 years. AI-designed drugs are now reaching clinical trials. The industry is reorganising around this, with pharma companies partnering with specialist AI firms and embedding NVIDIA infrastructure directly into their R&D pipelines. These are not future possibilities. They are happening now, and the pace is accelerating.
       </p>
       <p class="manifesto-body">
-        But using these tools well still requires an unusual combination of skills - enough ML to run and adapt the models, enough compute to work with them, and enough domain knowledge to ask the right questions. Most biologists have one of those things, maybe two. That gap is real, and it matters. I came into data science from the biology side, so I know what it feels like to have a question you cannot answer because the tools are out of reach. That is what drives most of what I build and write about.
+        But using these tools well still requires an unusual combination of skills - enough ML to run and adapt the models, enough compute to work with them, and enough domain knowledge to ask the right questions. Most biologists have one of those things, maybe two. Closing that gap - whether through upskilling or building teams that complement each other's strengths - is something I think the field needs to take seriously if it wants to fully leverage what AI can offer. I came into data science from the biology side, so I know what it feels like to have a question you can't answer because the tools are out of reach. That's what drives most of what I build and write about.
       </p>
       <p class="manifesto-body">
-        The deeper analysis - the specific partnerships, what the clinical evidence actually shows, what NVIDIA's infrastructure deals mean in practice, and the honest open questions about whether this produces better drugs - is in the blog.
+        The deeper analysis - the partnerships, what the clinical evidence actually shows, how NVIDIA's infrastructure deals could lead to more breakthroughs, and the honest open questions about whether any of this produces better drugs - is in <a href="https://amyfrancis.science" style="color:var(--terra-light);">the blog</a>.
       </p>
     </div>
 
@@ -359,7 +358,7 @@ footer span{color:var(--terra-light);}
         </div>
 
       </div>
-      <p class="models-footer">The industry case studies are moving fast. I cover specific partnerships, what the deals actually involve, and what they mean for how drugs get made - in the Industry &amp; Research blog posts below.</p>
+      <p class="models-footer">The industry is moving fast. These are the models I work with directly, write about, and use as lenses when thinking about where computational biology is heading.</p>
     </div>
   </div>
 </section>
@@ -397,9 +396,9 @@ footer span{color:var(--terra-light);}
       <div class="proj-top terra2"></div>
       <div class="proj-body">
         <span class="proj-tag">Flow Cytometry</span>
-        <h3>Automated flow cytometry analysis pipeline</h3>
-        <p>Built a post-acquisition flow cytometry analysis pipeline with an intuitive Streamlit interface, applying unsupervised ML - clustering and dimensionality reduction - to high-dimensional cytometry data to uncover cell population patterns and accelerate downstream reporting.</p>
-        <div class="stack"><span class="pill">Python</span><span class="pill">Streamlit</span><span class="pill">Scikit-learn</span><span class="pill">Unsupervised ML</span></div>
+        <h3>Flow cytometry analysis pipeline</h3>
+        <p>Built a post-acquisition flow cytometry analysis pipeline with an intuitive Streamlit interface for processing and visualising high-dimensional cytometry data, enabling efficient downstream reporting across client projects.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">Streamlit</span><span class="pill">Scikit-learn</span></div>
         <a class="proj-link" href="#">View project</a>
       </div>
     </div>
@@ -420,9 +419,19 @@ footer span{color:var(--terra-light);}
       <div class="proj-body">
         <span class="proj-tag">Antibody Optimisation</span>
         <h3>Predicting mutation impact on antibody-antigen binding</h3>
-        <p>At Roche pRED, used TensorFlow models grounded in global epistasis and pre-trained protein language models to predict binding affinity from deep mutational scanning data. Ongoing collaboration with University of Oslo, aiming for publication.</p>
+        <p>At Roche pRED, used TensorFlow models grounded in global epistasis and pre-trained protein language models to predict binding affinity from deep mutational scanning data.</p>
         <div class="stack"><span class="pill">TensorFlow</span><span class="pill">ESM</span><span class="pill">HPC</span><span class="pill">DMS</span></div>
         <a class="proj-link" href="#">Global Epistasis repo</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-top moss"></div>
+      <div class="proj-body">
+        <span class="proj-tag moss">Mentoring &amp; Leadership</span>
+        <h3>Automating ELISA analysis at Nexus BioQuest</h3>
+        <p>Building a pipeline to automate ELISA data processing and reporting, reducing manual effort across client projects. Currently mentoring a junior team member through the project as part of their coding development - turning it into a hands-on introduction to Python and scientific data pipelines.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Streamlit</span><span class="pill">Mentoring</span></div>
       </div>
     </div>
 
@@ -547,9 +556,9 @@ footer span{color:var(--terra-light);}
     </div>
 
     <div class="pub-item">
-      <span class="pub-type">Online Report · 2024</span>
+      <span class="pub-type">Technical Report · 2024</span>
       <div class="pub-title">Toxicity Prediction for Drug Discovery</div>
-      <div class="pub-journal">The Alan Turing Institute, Data Study Group</div>
+      <div class="pub-journal">The Alan Turing Institute, Data Study Group · Not peer-reviewed</div>
       <a class="pub-doi" href="https://doi.org/10.5281/zenodo.13882192" target="_blank">doi.org/10.5281/zenodo.13882192</a>
     </div>
 
@@ -604,137 +613,10 @@ footer span{color:var(--terra-light);}
   </div>
 </section>
 
-<!-- ── BLOG ── -->
-<section id="blog" style="background:var(--sand);padding:5.5rem 7vw;">
-  <p class="sec-label">Writing</p>
-  <h2 class="sec-h">Thinking out loud.</h2>
-  <p class="sec-sub">AI is going to reshape how biology is done. I think scientists at every level need to understand what is actually happening - not the hype version, and not the version that assumes a computer science degree. I write here to try to bridge that gap: covering real tools, real evidence, and real implications, in language that a working scientist can use. Four themes: opinion, industry analysis, technical walkthroughs, and practical guides.</p>
-
-  <!-- Tab bar -->
-  <div id="blog-tabs" style="display:flex;gap:0;margin-bottom:2.5rem;border-bottom:1px solid var(--sand-dark);flex-wrap:wrap;">
-    <button class="btab active" data-cat="all"     onclick="filterBlog('all',this)">All</button>
-    <button class="btab"        data-cat="opinion"  onclick="filterBlog('opinion',this)">Opinion</button>
-    <button class="btab"        data-cat="industry" onclick="filterBlog('industry',this)">Industry &amp; Research</button>
-    <button class="btab"        data-cat="technical" onclick="filterBlog('technical',this)">Technical</button>
-    <button class="btab"        data-cat="tutorial" onclick="filterBlog('tutorial',this)">Tutorials &amp; Guides</button>
-  </div>
-
-  <style>
-    .btab{background:none;border:none;padding:0.65rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color 0.15s,border-color 0.15s;}
-    .btab:hover{color:var(--ink);}
-    .btab.active{color:var(--terra);border-bottom-color:var(--terra);}
-    .bcard{background:var(--shell);border-radius:4px;padding:1.8rem;display:flex;flex-direction:column;gap:0.55rem;transition:transform 0.18s,opacity 0.18s;}
-    .bcard:hover{transform:translateY(-3px);}
-    .bcard.hidden{display:none;}
-    .bcard.live{opacity:1;cursor:pointer;}
-    .bcard.soon{opacity:0.65;cursor:default;}
-    .bcard a{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:0.55rem;flex:1;}
-    .bcat{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;}
-    .bcat.opinion  {color:var(--terra);}
-    .bcat.industry {color:var(--moss);}
-    .bcat.technical{color:#4A6FA5;}
-    .bcat.tutorial {color:var(--terra-light);}
-    .btop-opinion  {border-top:3px solid var(--terra);}
-    .btop-industry {border-top:3px solid var(--moss);}
-    .btop-technical{border-top:3px solid #4A6FA5;}
-    .btop-tutorial {border-top:3px solid var(--terra-light);}
-    .bstatus{font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
-    .bstatus.live{color:var(--moss);}
-    .btitle{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ink);line-height:1.3;}
-    .bdesc{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-top:0.1rem;}
-    .bread{font-size:11px;font-weight:500;color:var(--terra);letter-spacing:0.07em;text-transform:uppercase;margin-top:0.4rem;}
-    #blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.3rem;}
-  </style>
-
-  <div id="blog-grid">
-
-    <!-- OPINION -->
-    <div class="bcard live btop-opinion" data-cat="opinion">
-      <a href="blog-interdisciplinary-teams.html">
-        <span class="bcat opinion">Opinion</span>
-        <span class="bstatus live">Published</span>
-        <span class="btitle">Great science needs more than scientists</span>
-        <span class="bdesc">On what actually makes interdisciplinary teams work - diversity of background, the friction that comes with it, and why that friction is usually the point. Draws on three very different collaborative experiences.</span>
-        <span class="bread">Read post →</span>
-      </a>
-    </div>
-
-    <div class="bcard soon btop-opinion" data-cat="opinion">
-      <span class="bcat opinion">Opinion</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">What makes a team actually work - on feedback, trust, and creating space for honest challenge</span>
-      <span class="bdesc">The leadership questions that rarely get asked directly: how to build teams where people feel safe enough to disagree, how to give feedback that lands well, and why psychological safety is not a soft metric.</span>
-    </div>
-
-    <!-- INDUSTRY & RESEARCH -->
-    <div class="bcard live btop-industry" data-cat="industry">
-      <a href="blog-ai-drug-discovery.html">
-        <span class="bcat industry">Industry &amp; Research</span>
-        <span class="bstatus live">Published</span>
-        <span class="btitle">How AI is changing drug discovery - and what the evidence actually says</span>
-        <span class="bdesc">The industry is reorganising fast - specialist AI partnerships, NVIDIA infrastructure embedded in pharma R&amp;D, and the first AI-designed drugs reaching clinical trials. What is actually happening, what the evidence shows, and the honest open questions.</span>
-        <span class="bread">Read post →</span>
-      </a>
-    </div>
-
-    <!-- TECHNICAL -->
-    <div class="bcard soon btop-technical" data-cat="technical">
-      <span class="bcat technical">Technical</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">What NVIDIA's BioNeMo actually means for wet-lab scientists</span>
-      <span class="bdesc">A practical look at what BioNeMo, DiffDock, and the broader NVIDIA biology stack make possible - and what still needs a specialist to get right.</span>
-    </div>
-
-    <div class="bcard soon btop-technical" data-cat="technical">
-      <span class="bcat technical">Technical</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">Using ESM-2 to predict protein fitness - a walkthrough with real data</span>
-      <span class="bdesc">A hands-on look at Meta's protein language model: what it actually does, how to run it, and how to interpret the output in a biological context.</span>
-    </div>
-
-    <div class="bcard soon btop-technical" data-cat="technical">
-      <span class="bcat technical">Technical</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">Unsupervised ML for immune cell population discovery in RNA-seq data</span>
-      <span class="bdesc">From alignment to UMAP - how to use clustering and dimensionality reduction to define cell populations without prior labels, and what to watch out for when you do.</span>
-    </div>
-
-    <!-- TUTORIALS -->
-    <div class="bcard soon btop-tutorial" data-cat="tutorial">
-      <span class="bcat tutorial">Tutorials &amp; Guides</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">RNA-seq from scratch - a practical guide for biologists who have never touched the command line</span>
-      <span class="bdesc">A step-by-step walkthrough of a full RNA-seq pipeline - from raw FASTQ files to differential expression results - written for researchers with domain knowledge but no computational background.</span>
-    </div>
-
-    <div class="bcard soon btop-tutorial" data-cat="tutorial">
-      <span class="bcat tutorial">Tutorials &amp; Guides</span>
-      <span class="bstatus">Coming soon</span>
-      <span class="btitle">What AlphaFold actually gives you - and how to make sense of it</span>
-      <span class="bdesc">A plain-language guide to interpreting AlphaFold output: confidence scores, what pLDDT means in practice, and how to decide whether a predicted structure is actually useful for your question.</span>
-    </div>
-
-  </div>
-</section>
-
-<script>
-function filterBlog(cat, btn) {
-  document.querySelectorAll('.btab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.bcard').forEach(card => {
-    if (cat === 'all' || card.dataset.cat === cat) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
-  });
-}
-</script>
-
 <!-- ── FOOTER ── -->
 <footer>
   <div>© 2026 Amy Francis · All rights reserved</div>
-  <div>Senior Data Scientist · <span>Bristol, UK</span> · Views are my own</div>
+  <div>Senior Data Scientist · <span>Bristol, UK</span> · I also write about science &amp; AI at <span>amyfrancis.science</span></div>
 </footer>
 
 </body>
