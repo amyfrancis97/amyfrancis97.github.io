@@ -622,10 +622,10 @@ footer span{color:var(--terra-light);}
   </div>
 
   <div class="contact-form">
-    <div class="fg"><label>Your name</label><input type="text" placeholder="Jane Smith"></div>
-    <div class="fg"><label>Email address</label><input type="email" placeholder="jane@example.com"></div>
-    <div class="fg"><label>What are you working on?</label><textarea rows="5" placeholder="What are you working on or thinking about?"></textarea></div>
-    <button class="btn-p" style="width:100%">Send message</button>
+    <div class="fg"><label>Your name</label><input id="cf-name" type="text" placeholder="Jane Smith"></div>
+    <div class="fg"><label>Email address</label><input id="cf-email" type="email" placeholder="jane@example.com"></div>
+    <div class="fg"><label>What are you working on?</label><textarea id="cf-message" rows="5" placeholder="What are you working on or thinking about?"></textarea></div>
+    <button class="btn-p" style="width:100%" onclick="sendContactEmail()">Send message</button>
   </div>
   <div class="stag-bristol"><img src="bristol_sketch.png" alt=""></div>
 </section>
@@ -636,5 +636,19 @@ footer span{color:var(--terra-light);}
   <div>Senior Data Scientist · <span>Bristol, UK</span> · I also write about science &amp; AI at <span>amyfrancis.science</span></div>
 </footer>
 
+<script>
+function sendContactEmail() {
+  var name    = document.getElementById('cf-name').value.trim();
+  var email   = document.getElementById('cf-email').value.trim();
+  var message = document.getElementById('cf-message').value.trim();
+  if (!name || !email || !message) {
+    alert('Please fill in all fields before sending.');
+    return;
+  }
+  var subject = encodeURIComponent('Message from ' + name);
+  var body    = encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
+  window.location.href = 'mailto:amyfrancis.science@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
 </body>
 </html>
