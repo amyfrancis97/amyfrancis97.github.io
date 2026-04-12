@@ -75,6 +75,9 @@ section{padding:5.5rem 7vw;}
 .about-text h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:var(--moss);margin-bottom:0.9rem;}
 .about-text p{color:var(--ink-light);margin-bottom:1.1rem;line-height:1.85;font-size:0.95rem;}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-top:1.8rem;}
+.bristol-sketch-wrap{margin-top:1.2rem;position:relative;border-radius:6px;overflow:hidden;}
+.bristol-sketch{width:100%;height:auto;display:block;border-radius:6px;opacity:0.92;mix-blend-mode:multiply;}
+.bristol-sketch-label{position:absolute;bottom:0.6rem;left:0.8rem;font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--shell);background:var(--terra);padding:3px 8px;border-radius:2px;}
 .fact{padding:0.9rem;background:var(--shell);border-left:2px solid var(--terra);}
 .fact-l{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem;}
 .fact-v{font-size:0.88rem;font-weight:500;color:var(--ink);}
@@ -215,8 +218,8 @@ footer span{color:var(--terra-light);}
   <div class="hero-content">
     <p class="eyebrow">Senior Data Scientist · PhD · Computational Biology</p>
     <h1 class="hero-name">Amy<br>Francis</h1>
-    <p class="hero-title">Data science, ML &amp; drug discovery - and making these tools accessible to everyone.</p>
-    <p class="hero-bio">I'm a Senior Data Scientist bridging computational biology and experimental research, with expertise in machine learning, bioinformatics, and tool development across cancer genomics, immunology, and drug discovery. I think a lot about how AI is changing science - and about making sure those changes reach every researcher, not just those with a computer science or machine learning background. My work tries to do that: building practical tools, leading interdisciplinary teams, and closing the gap between what these models can do and what most researchers can actually access.</p>
+    <p class="hero-title">Data science, ML &amp; drug discovery - for everyone.</p>
+    <p class="hero-bio">I'm a Senior Data Scientist bridging computational biology and experimental research, with expertise in machine learning, bioinformatics, and tool development across cancer genomics, immunology, and drug discovery. I think a lot about how AI is changing science - and about making sure those changes reach every researcher, not just those with a computer science or machine learning background. My work tries to do that: building practical tools, leading interdisciplinary teams, and figuring out how to get the most out of modern AI in real biological research.</p>
     <div class="hero-tags">
       <span class="hero-tag">Cancer Genomics</span>
       <span class="hero-tag">Drug Discovery</span>
@@ -248,15 +251,19 @@ footer span{color:var(--terra-light);}
 <section class="about-section" id="about">
   <div class="about-img">
     <img class="stag-about" src="website_protein_structure.png" alt="">
+    <div class="bristol-sketch-wrap">
+      <img class="bristol-sketch" src="bristol_sketch.png" alt="Sketch of Bristol">
+      <span class="bristol-sketch-label">Bristol, UK</span>
+    </div>
   </div>
 
   <div class="about-text">
     <p class="sec-label">About me</p>
-    <h2 class="sec-h">I try to read where science is heading,<br>and build the skills to meet it.</h2>
-    <h3>My background is wet-lab first. I built a CRISPR activation screening platform at the Crick Institute, working alongside bioinformaticians and attending seminars from some of the best scientists in the world. That exposure is what made the move into computation feel less like a leap and more like an obvious next step.</h3>
+    <h2 class="sec-h">Where biology meets<br>machine learning.</h2>
+    <h3>I came from the biology side, and I've always thought the most interesting work happens where disciplines overlap.</h3>
     <p>I'm a Senior Data Scientist at Nexus BioQuest, a contract research organisation in Portishead, Bristol, where I work across data science, machine learning, and analytical tool development in support of research programmes spanning pharmaceutical and biotech clients.</p>
     <p>My PhD at the University of Bristol, funded by a competitive Cancer Research UK studentship, focused on predicting the functional impact of genetic variants in cancer genomes. I've since worked at Roche, exploring protein language models and antibody optimisation - and published peer-reviewed papers in variant effect prediction.</p>
-    <p>I've also led interdisciplinary teams to back-to-back hackathon victories at Cambridge and the Wellcome Collection, and co-organised Bristol's first AI in Health meeting, which secured two interdisciplinary research grants. The best science I've been part of has come from people with genuinely different mental models trying to solve the same problem. It generates questions that nobody in a single-discipline team would ever think to ask, and occasionally, those questions lead somewhere important.</p>
+    <p>Beyond the code, I've led interdisciplinary teams to back-to-back hackathon victories - at Cambridge and the Wellcome Collection - and co-organised Bristol's first AI in Health meeting, securing two interdisciplinary research grants. I believe the best science happens at the edges of disciplines, and I love building the teams and environments where that becomes possible.</p>
     <div class="facts">
       <div class="fact"><div class="fact-l">Based in</div><div class="fact-v">Bristol, UK</div></div>
       <div class="fact"><div class="fact-l">Experience</div><div class="fact-v">5+ Years</div></div>
@@ -274,12 +281,12 @@ footer span{color:var(--terra-light);}
   <div class="manifesto-bg"><img src="virus.png" alt=""></div>
 
   <p class="sec-label">A perspective on AI in science</p>
-  <h2 class="sec-h" style="color:var(--shell);">AI is going to be part of everyday science.<br>I think the hard work now is getting these tools to the scientists who need them, including those who don't yet know they do, and that's where the next medicines will come from.</h2>
-  <p class="sec-sub">The tools exist, and the clinical evidence is starting to follow. The real challenge now is getting them out of research papers and into the hands of the scientists who could use them to find new medicines, and opening up possibilities for researchers who don't even know what they're missing yet.</p>
+  <h2 class="sec-h" style="color:var(--shell);">AI is going to be part of everyday science.<br>It should work for everyone.</h2>
+  <p class="sec-sub">The tools exist, and the clinical evidence is starting to follow. One of the biggest challenges now is making sure they reach everyone who needs them - not just those with the right computational background.</p>
 
   <div class="manifesto-inner">
     <div class="manifesto-statement">
-      <p class="manifesto-quote">"Some of the most powerful tools in the history of biology are sitting in research papers and GitHub repos that most bench scientists have never heard of. Building the bridges to get them there, through upskilling and through teams where computational and experimental scientists actually learn from each other, is how I think we find the next generation of medicines."</p>
+      <p class="manifesto-quote">"Some of the most cutting-edge tools in the history of biology are sitting in research papers and GitHub repos that most bench scientists have never heard of. This feels like a problem worth working on."</p>
       <p class="manifesto-body">
         AlphaFold transformed protein structure prediction in 2021 - making accurate structural models accessible for hundreds of millions of proteins where before it had required years of experimental work. AI-designed drugs are now reaching clinical trials. The industry is adapting, with pharma companies partnering with specialist AI firms and embedding AI infrastructure directly into their R&D pipelines. The pace of change is accelerating.
       </p>
@@ -375,6 +382,7 @@ footer span{color:var(--terra-light);}
         <h3>Mapping novel compounds to biological pathways</h3>
         <p>Led the winning team at GetSeen Ventures' AI × Cancer Bio Hackathon. Used transformer encoders on SMILES strings and high-content image embeddings from the RxRx3-core dataset to predict molecular pathways. Ongoing collaboration likely to result in publication.</p>
         <div class="stack"><span class="pill">Transformers</span><span class="pill">SMILES</span><span class="pill">Image Embeddings</span><span class="pill">Drug Discovery</span></div>
+        <a class="proj-link" href="#">View project</a>
       </div>
     </div>
 
@@ -385,20 +393,7 @@ footer span{color:var(--terra-light);}
         <h3>Deep learning for protein fitness prediction</h3>
         <p>Led the winning team at the Roche &amp; HDR Hackathon. Encoded protein sequences with pre-trained language models (ESM, AntiBERT) and explored CNNs to model sequence-function relationships using DMS data from Protein Gym. Secured a Roche AI internship as a direct result.</p>
         <div class="stack"><span class="pill">ESM</span><span class="pill">AntiBERT</span><span class="pill">CNNs</span><span class="pill">DMS</span><span class="pill">PyTorch</span></div>
-        <a class="proj-link" href="https://www.hdruk.ac.uk/news/the-hdr-uk-roche-hackathon-2024/" target="_blank">Read opinion piece</a>
-      </div>
-    </div>
-
-    <div class="proj-card">
-      <div class="proj-top moss"></div>
-      <div class="proj-body">
-        <span class="proj-tag moss">Alan Turing Institute</span>
-        <h3>Toxicity prediction for drug discovery: Data Study Group with Ignota Labs</h3>
-        <p>Participated in the Alan Turing Institute's Data Study Group in collaboration with Ignota Labs, working on machine learning approaches to predict drug toxicity. Contributed to the team summary and published technical report.</p>
-        <div class="stack"><span class="pill">Python</span><span class="pill">ML</span><span class="pill">Drug Discovery</span><span class="pill">Toxicity Prediction</span></div>
-        <a class="proj-link" href="https://www.turing.ac.uk/news/publications/data-study-group-final-report-ignota-labs" target="_blank">Team summary</a>
-        &nbsp;&nbsp;
-        <a class="proj-link" href="https://zenodo.org/records/13882192" target="_blank">Full report</a>
+        <a class="proj-link" href="#">View project</a>
       </div>
     </div>
 
@@ -409,6 +404,7 @@ footer span{color:var(--terra-light);}
         <h3>Flow cytometry analysis pipeline</h3>
         <p>Built a post-acquisition flow cytometry analysis pipeline with an intuitive Streamlit interface for processing and visualising high-dimensional cytometry data, enabling efficient downstream reporting across client projects.</p>
         <div class="stack"><span class="pill">Python</span><span class="pill">Streamlit</span><span class="pill">Scikit-learn</span></div>
+        <a class="proj-link" href="#">View project</a>
       </div>
     </div>
 
@@ -430,7 +426,7 @@ footer span{color:var(--terra-light);}
         <h3>Predicting mutation impact on antibody-antigen binding</h3>
         <p>At Roche pRED, used TensorFlow models grounded in global epistasis and pre-trained protein language models to predict binding affinity from deep mutational scanning data.</p>
         <div class="stack"><span class="pill">TensorFlow</span><span class="pill">ESM</span><span class="pill">HPC</span><span class="pill">DMS</span></div>
-        <a class="proj-link" href="https://github.com/amyfrancis97/global-epistasis" target="_blank">Global Epistasis repo</a>
+        <a class="proj-link" href="#">Global Epistasis repo</a>
       </div>
     </div>
 
@@ -439,8 +435,8 @@ footer span{color:var(--terra-light);}
       <div class="proj-body">
         <span class="proj-tag moss">Mentoring &amp; Leadership</span>
         <h3>Automating ELISA analysis at Nexus BioQuest</h3>
-        <p>Currently developing a pipeline to automate ELISA data processing and reporting, reducing manual effort across client projects. Currently mentoring a team member through the project as part of their coding development - turning it into a hands-on introduction to Python and scientific data pipelines.</p>
-        <div class="stack"><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Streamlit</span><span class="pill">Mentoring</span><span class="pill">In Progress</span></div>
+        <p>Building a pipeline to automate ELISA data processing and reporting, reducing manual effort across client projects. Currently mentoring a junior team member through the project as part of their coding development - turning it into a hands-on introduction to Python and scientific data pipelines.</p>
+        <div class="stack"><span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Streamlit</span><span class="pill">Mentoring</span></div>
       </div>
     </div>
 
@@ -451,6 +447,7 @@ footer span{color:var(--terra-light);}
         <h3>Bristol AI in Health Meeting</h3>
         <p>Co-organised Bristol's first interdisciplinary AI in Health Meeting in collaboration with the Elizabeth Blackwell Institute. Facilitated cross-disciplinary collaboration that resulted in two interdisciplinary grants for applied AI projects.</p>
         <div class="stack"><span class="pill">Leadership</span><span class="pill">Event Organisation</span><span class="pill">Grant Facilitation</span></div>
+        <a class="proj-link" href="#">Learn more</a>
       </div>
     </div>
 
@@ -462,7 +459,7 @@ footer span{color:var(--terra-light);}
   <div class="stag-skill-wrap"><img src="virus.png" alt=""></div>
 
   <p class="sec-label">Skills &amp; Tools</p>
-  <h2 class="sec-h">The tools I work with.</h2>
+  <h2 class="sec-h">The craft behind the work.</h2>
   <p class="sec-sub">Picked up across academia, industry, and a few hackathons.</p>
   <div class="sk-grid">
 
@@ -486,7 +483,8 @@ footer span{color:var(--terra-light);}
     <div class="sk-group">
       <h4>RNA-seq &amp; Transcriptomics</h4>
       <ul class="sk-list">
-        <li>Count matrices: Cell Ranger</li>
+        <li>Alignment: STAR, HISAT2, Salmon</li>
+        <li>QC: FastQC, MultiQC, Trimmomatic</li>
         <li>Quantification: featureCounts, DESeq2</li>
         <li>Differential expression: edgeR, limma</li>
         <li>Unsupervised ML for cell population definition</li>
@@ -537,8 +535,8 @@ footer span{color:var(--terra-light);}
 <!-- ── PUBLICATIONS ── -->
 <section class="pubs-section" id="publications">
   <p class="sec-label">Publications</p>
-  <h2 class="sec-h">Published research.</h2>
-  <p class="sec-sub">Three peer-reviewed papers and one technical report, spanning cancer genomics, variant effect prediction, and drug discovery.</p>
+  <h2 class="sec-h">Peer-reviewed research.</h2>
+  <p class="sec-sub">Four published works spanning cancer genomics, variant effect prediction, and drug discovery.</p>
   <div class="pub-list">
 
     <div class="pub-item">
@@ -576,18 +574,18 @@ footer span{color:var(--terra-light);}
 <section class="contact-section" id="contact">
   <div class="contact-left">
     <p class="sec-label">Get in touch</p>
-    <h2 class="sec-h">Say hello.</h2>
-    <p>If you're in Bristol, working on something in this space, or just want to grab a coffee and talk through a problem, feel free to get in touch. I'm always up for connecting with others in the field and sharing knowledge.</p>
+    <h2 class="sec-h">Always happy to talk science.</h2>
+    <p>If something I've written resonates, if you're working on an interesting problem, or if you just want to talk about AI in biology - feel free to get in touch. I am always up for a good conversation.</p>
     <div class="channels">
 
-      <a class="channel" href="mailto:amyfrancis1997@hotmail.com">
+      <a class="channel" href="/cdn-cgi/l/email-protection#e584889c8397848b868c96d4dcdcd2a58d8a9188848c89cb868a88">
         <div class="ch-icon">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--shell)" stroke-width="2" stroke-linecap="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
         </div>
-        <div class="ch-info"><strong>Email</strong><span>amyfrancis1997@hotmail.com</span></div>
+        <div class="ch-info"><strong>Email</strong><span><span class="__cf_email__" data-cfemail="4e2f2337283c2f202d273d7f7777790e26213a232f2722602d2123">[email&#160;protected]</span></span></div>
       </a>
 
       <a class="channel" href="https://github.com/amyfrancis97" target="_blank">
