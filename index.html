@@ -151,7 +151,7 @@ section{padding:5.5rem 7vw;}
 .pub-doi:hover{text-decoration:underline;}
 
 /* ── CONTACT ── */
-.contact-section{background:var(--sand);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;overflow:hidden;padding-bottom:18rem;}
+.contact-section{background:var(--sand);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;overflow:hidden;padding-bottom:24rem;}
 .stag-bristol{
   position:absolute;bottom:0;left:7vw;right:7vw;
   pointer-events:none;opacity:0.4;
@@ -160,6 +160,7 @@ section{padding:5.5rem 7vw;}
   -webkit-mask-image:radial-gradient(ellipse 85% 80% at 50% 50%, black 30%, transparent 72%);
 }
 .stag-bristol img{width:100%;height:auto;display:block;object-fit:contain;mix-blend-mode:multiply;}
+.contact-left{position:relative;z-index:1;}
 .contact-left p{color:var(--muted);margin-bottom:1.8rem;line-height:1.85;font-size:0.95rem;}
 .channels{display:flex;flex-direction:column;gap:0.9rem;}
 .channel{display:flex;align-items:center;gap:1rem;padding:0.9rem 1rem;background:var(--shell);border-radius:2px;text-decoration:none;color:var(--ink);transition:background 0.2s;}
@@ -167,7 +168,7 @@ section{padding:5.5rem 7vw;}
 .ch-icon{width:34px;height:34px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .ch-info strong{display:block;font-size:0.88rem;font-weight:500;color:var(--ink);}
 .ch-info span{font-size:0.78rem;color:var(--muted);}
-.contact-form{background:var(--shell);padding:2.2rem;border-radius:4px;}
+.contact-form{background:var(--shell);padding:2.2rem;border-radius:4px;position:relative;z-index:1;}
 .fg{margin-bottom:1.1rem;}
 .fg label{display:block;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.45rem;}
 .fg input,.fg textarea{width:100%;padding:0.7rem 0.9rem;background:var(--sand);border:1px solid var(--sand-dark);border-radius:2px;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:var(--ink);outline:none;transition:border-color 0.2s;resize:none;}
@@ -178,18 +179,46 @@ footer{background:var(--ink);color:rgba(250,246,237,0.35);padding:1.8rem 7vw;dis
 footer span{color:var(--terra-light);}
 
 /* ── RESPONSIVE ── */
+
+/* Large laptops / small desktops: soften hero image so it doesn't fight the text */
+@media(max-width:1200px){
+  .stag-hero{opacity:0.22;}
+}
+
+/* Tablets / small laptops */
 @media(max-width:900px){
   .about-section,.contact-section{grid-template-columns:1fr;gap:2rem;}
   .manifesto-inner{grid-template-columns:1fr;gap:2.5rem;}
-
   .models-grid{grid-template-columns:1fr 1fr;}
   .badge{right:0;bottom:-1rem;}
   .nav-links{display:none;}
   .stag-hero{width:90vw;right:-10vw;top:auto;bottom:-5vh;transform:none;opacity:0.1;}
   .wins-bar{gap:1.5rem;}
   .win-divider{display:none;}
+  /* Shrink contact bottom padding now the layout is single-column */
+  .contact-section{padding-bottom:12rem;}
 }
-@media(max-width:520px){.models-grid{grid-template-columns:1fr;}}
+
+/* Portrait tablets / large phones */
+@media(max-width:640px){
+  section{padding:4rem 5vw;}
+  .about-section,.contact-section{padding:4rem 5vw;}
+  .contact-section{padding-bottom:9rem;}
+  /* Hide purely decorative bg images that are too large relative to the viewport */
+  .manifesto-bg{display:none;}
+  .stag-skill-wrap{display:none;}
+  /* Let the Bristol sketch span the full width */
+  .stag-bristol{left:0;right:0;}
+  .hero-content{padding:5rem 5vw;}
+}
+
+/* Small phones */
+@media(max-width:520px){
+  .models-grid{grid-template-columns:1fr;}
+  .facts{grid-template-columns:1fr;}
+  .contact-section{padding-bottom:4rem;}
+  .wins-bar{flex-direction:column;gap:1rem;align-items:flex-start;}
+}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
