@@ -151,7 +151,7 @@ section{padding:5.5rem 7vw;}
 .pub-doi:hover{text-decoration:underline;}
 
 /* ── CONTACT ── */
-.contact-section{background:var(--sand);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;overflow:hidden;padding-bottom:24rem;}
+.contact-section{background:var(--sand);position:relative;overflow:hidden;padding-bottom:24rem;}
 .stag-bristol{
   position:absolute;bottom:0;left:7vw;right:7vw;
   pointer-events:none;opacity:0.4;
@@ -187,7 +187,7 @@ footer span{color:var(--terra-light);}
 
 /* Tablets / small laptops */
 @media(max-width:900px){
-  .about-section,.contact-section{grid-template-columns:1fr;gap:2rem;}
+  .about-section{grid-template-columns:1fr;gap:2rem;}
   .manifesto-inner{grid-template-columns:1fr;gap:2.5rem;}
   .models-grid{grid-template-columns:1fr 1fr;}
   .badge{right:0;bottom:-1rem;}
@@ -610,9 +610,7 @@ footer span{color:var(--terra-light);}
 <!-- ── CONTACT ── -->
 <section class="contact-section" id="contact">
   <div class="contact-left">
-    <p class="sec-label">Get in touch</p>
-    <h2 class="sec-h">Say hello.</h2>
-    <p>If you're in Bristol, working on something in this space, or just want to grab a coffee and talk through a problem, feel free to get in touch. I'm always up for connecting with others in the field and sharing knowledge.</p>
+    <p class="sec-label">Contact</p>
     <div class="channels">
 
       <a class="channel" href="mailto:amyfrancis.science@gmail.com">
@@ -646,13 +644,6 @@ footer span{color:var(--terra-light);}
 
     </div>
   </div>
-
-  <form class="contact-form" action="https://formspree.io/f/mjgjbalq" method="POST">
-    <div class="fg"><label>Your name</label><input type="text" name="name" placeholder="Jane Smith" required></div>
-    <div class="fg"><label>Email address</label><input type="email" name="email" placeholder="jane@example.com" required></div>
-    <div class="fg"><label>What are you working on?</label><textarea name="message" rows="5" placeholder="What are you working on or thinking about?" required></textarea></div>
-    <button class="btn-p" type="submit" style="width:100%">Send message</button>
-  </form>
   <div class="stag-bristol"><img src="bristol_sketch.png" alt=""></div>
 </section>
 
